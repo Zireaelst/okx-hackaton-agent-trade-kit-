@@ -18,4 +18,9 @@ module.exports = {
       'okx-ai/intro', 'okx-ai/roles', 'okx-ai/quickstart', 'okx-ai/workflow',
     ] },
   ],
+  ideas: [
+    { type: 'category', label: 'Hackathon Fikirleri', items: [
+      'ideas/intro', 'ideas/atk', 'ideas/onchainos', 'ideas/okx-ai',
+    ] },
+  ],
 };

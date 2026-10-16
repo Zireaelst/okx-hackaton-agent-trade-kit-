@@ -20,6 +20,13 @@ Use read-only market data by default. Never request or expose API keys, secret k
 - [OnchainOS guide](https://okx-tr-atk-hackathon-guide.vercel.app/guide/onchainos/intro): Separate onchain developer infrastructure.
 - [OKX.ai guide](https://okx-tr-atk-hackathon-guide.vercel.app/guide/okx-ai/intro): Separate agent marketplace.
 
+## Hackathon Project Ideas
+
+- [20 project ideas](https://okx-tr-atk-hackathon-guide.vercel.app/guide/ideas/intro): Community-proposed MVPs, not official OKX products or contest categories.
+- [12 ATK ideas](https://okx-tr-atk-hackathon-guide.vercel.app/guide/ideas/atk): Read-only market-data projects.
+- [5 OnchainOS ideas](https://okx-tr-atk-hackathon-guide.vercel.app/guide/ideas/onchainos): Mock-first onchain data and payment-flow prototypes.
+- [3 OKX.ai ideas](https://okx-tr-atk-hackathon-guide.vercel.app/guide/ideas/okx-ai): Simulated marketplace role workflows.
+
 ## Official Sources
 
 - [OKX TR Agent Trade Kit documentation](https://tr.okx.com/docs-v5/agent_en/#introduction)

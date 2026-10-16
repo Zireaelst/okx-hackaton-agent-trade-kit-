@@ -18,6 +18,7 @@ export default function Home() {
         <div className="button-group">
           <Link className="button button--primary button--lg" to="/guide/atk/quickstart">5 dakikada başla</Link>
           <Link className="button button--outline button--secondary button--lg" to="/ai">AI paketini al</Link>
+          <Link className="button button--outline button--secondary button--lg" to="/guide/ideas/intro">20 proje fikrine bak</Link>
         </div>
       </div></section>
       <section className="container"><div className="guideGrid">

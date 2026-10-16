@@ -28,6 +28,7 @@ Statik çıktı `build/` klasöründedir. `vercel.json` kurulum, build ve çıkt
 - `docs/atk/setup-*.md`: Codex, Claude Code ve Cursor için ayrı CLI, MCP, Skills kurulumları
 - `docs/onchainos/`: OnchainOS rehberi
 - `docs/okx-ai/`: OKX.ai rehberi
+- `docs/ideas/`: ATK, OnchainOS ve OKX.ai için 20 topluluk hackathon fikri
 - `static/llms.txt`, `static/llms-full.txt`: İngilizce agent bağlamı
 - `static/ai/starter-prompt.txt`: Codex/Claude Code başlangıç prompt'u
 - `SOURCE_AUDIT.md`: kaynak önceliği, kontrol tarihi ve bilinen uyuşmazlıklar

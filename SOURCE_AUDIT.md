@@ -57,3 +57,9 @@ Kayıt, staking, marketplace görevi ve ödeme gerçek dış sistem eylemleridir
 - `llms.txt` biçim önerisi: https://llmstxt.org/
 - Morpho Docs yalnızca gezinme düzeni referansı: https://docs.morpho.org/
 - Demo sayıları bu projede oluşturulmuş **temsili** veridir; canlı piyasa fiyatı değildir.
+
+## Hackathon fikirleri
+
+`docs/ideas/` içindeki 20 fikir **topluluk önerisidir**; resmî OKX ürünleri veya yarışma kategorileri olarak sunulmaz. ATK fikirlerinin veri araçları için [ATK deposu](https://github.com/okx/agent-trade-kit) ve [CLI başvurusu](https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md) kontrol edildi. OnchainOS fikirlerinin dayanağı [Market token](https://web3.okx.com/onchainos/dev-docs/market/market-token-reference), [token cluster](https://web3.okx.com/onchainos/dev-docs/market/market-token-cluster-overview), [DEX quote](https://web3.okx.com/onchainos/dev-docs/trade/dex-get-quote), [portfolio](https://web3.okx.com/onchainos/dev-docs/market/market-portfolio-overview) ve [Payments](https://web3.okx.com/onchainos/dev-docs/payments/api-overview) resmî belgeleridir. OKX.ai rol akışı için [User görevleri](https://web3.okx.com/onchainos/dev-docs/okxai/user-buy-service), [ASP](https://web3.okx.com/onchainos/dev-docs/okxai/asp-introduction) ve [Evaluator](https://web3.okx.com/onchainos/dev-docs/okxai/evaluator-introduction) belgeleri kullanıldı. **Kontrol tarihi: 16 Ekim 2026.**
+
+OnchainOS API erişimi canlı veri herkese açık olsa da geliştirici kimlik doğrulaması gerektirebilir; bu fikirler önce temsili veriyle gösterilecek şekilde yazıldı. OKX.ai fikirleri gerçek marketplace işlemi veya staking gerektirmez. Ürün yeteneği ile önerilen uygulama tasarımı ayrı anlatılır.

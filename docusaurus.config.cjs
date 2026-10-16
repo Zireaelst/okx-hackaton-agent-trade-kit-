@@ -32,6 +32,7 @@ const config = {
         { to: '/guide/atk/intro', label: 'Agent Trade Kit', position: 'left', activeBasePath: '/guide/atk' },
         { to: '/guide/onchainos/intro', label: 'OnchainOS', position: 'left', activeBasePath: '/guide/onchainos' },
         { to: '/guide/okx-ai/intro', label: 'OKX.ai', position: 'left', activeBasePath: '/guide/okx-ai' },
+        { to: '/guide/ideas/intro', label: 'Hackathon Fikirleri', position: 'left', activeBasePath: '/guide/ideas' },
         { to: '/guide/atk/demo', label: 'Rehberli Demo', position: 'right' },
         { to: '/ai', label: 'AI için', position: 'right' },
         { href: 'https://github.com/Zireaelst/okx-hackaton-agent-trade-kit-', label: 'GitHub', position: 'right' },
@@ -44,6 +45,7 @@ const config = {
           { label: 'OKX TR Agent Trade Kit', to: '/guide/atk/intro' },
           { label: 'OnchainOS', to: '/guide/onchainos/intro' },
           { label: 'OKX.ai', to: '/guide/okx-ai/intro' },
+          { label: 'Hackathon Fikirleri', to: '/guide/ideas/intro' },
         ] },
         { title: 'Resmî kaynaklar', items: [
           { label: 'OKX TR ATK', href: 'https://tr.okx.com/docs-v5/agent_en/#introduction' },

@@ -15,7 +15,9 @@ ATK'nin `market` modülü, bir prototip için anahtarsız başlangıç noktasıd
 | Funding rate | Perpetual sözleşme fonlama oranı | Türev piyasa izleme |
 | Open interest | Açık pozisyon büyüklüğü | Piyasa ilgisi göstergesi |
 
-## Hackathon için üç fikir
+## ATK ile başlangıç için üç fikir
+
+Daha geniş bir liste için [20 projelik Hackathon Fikirleri rehberine](../ideas/intro.md) bak.
 
 ### Market Risk Copilot
 

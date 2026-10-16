@@ -112,3 +112,7 @@ OKX.ai is an agent marketplace with User, Agent Service Provider (ASP), and Eval
 ## Suggested starter task
 
 "Use OKX TR Agent Trade Kit's public market tools to inspect BTC-USDT. Retrieve ticker, the first five order-book levels, and the last six completed 1-hour candles. Calculate bid/ask spread in basis points and the completed-candle price range. Cite the tools and data timestamps. Do not place orders, access my account, invent missing data, or ask for credentials."
+
+## Hackathon project ideas
+
+The Turkish idea hub at https://okx-tr-atk-hackathon-guide.vercel.app/guide/ideas/intro proposes 20 weekend MVPs: 12 read-only ATK market-data ideas, 5 mock-first OnchainOS ideas, and 3 simulated OKX.ai marketplace ideas. These are community proposals, not shipped OKX products, official contest categories, guaranteed winners, or proof that a live API is available without developer access. For any idea, show the source tool, instrument or chain, data timestamp, calculation assumptions, and missing data. Keep real orders, swaps, wallet signatures, transfers, payments, marketplace registration, and staking outside the starter demo.
