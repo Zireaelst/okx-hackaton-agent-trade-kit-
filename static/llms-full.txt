@@ -39,17 +39,23 @@ codex mcp add okx-tr-market -- okx-trade-mcp --site tr --modules market
 codex mcp list
 ```
 
+Detailed Codex setup: https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/setup-codex
+
 Claude Code direct registration:
 
 ```bash
 claude mcp add --transport stdio okx-tr-market -- okx-trade-mcp --site tr --modules market
 ```
 
+Detailed Claude Code setup: https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/setup-claude-code
+
 Cursor MCP configuration (merge this server into any existing mcpServers object):
 
 ```json
 {"mcpServers":{"okx-tr-market":{"command":"okx-trade-mcp","args":["--site","tr","--modules","market"]}}}
 ```
+
+Detailed Cursor setup: https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/setup-cursor
 
 The 1.4.8 ATK `setup` helper does not accept a `--site` flag. Direct registration is needed to select the TR endpoint explicitly.
 
@@ -66,13 +72,13 @@ OKX_SITE=tr okx market funding-rate BTC-USDT-SWAP
 
 CLI subcommands are separated by spaces. MCP tool identifiers use another naming form; do not invent CLI commands by transforming MCP names. Current CLI reference: https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md
 
-Install official Agent Skills:
+Install only the public market-data Agent Skill in the coding agent's project directory (replace the agent ID with `claude-code` or `cursor` as appropriate):
 
 ```bash
-npx skills add okx/agent-skills
+npx --yes skills add okx/agent-skills --skill okx-cex-market --agent codex --copy --yes
 ```
 
-The skills require the `okx` CLI. Official skill list: https://github.com/okx/agent-skills
+The skill requires the `okx` CLI. `--skill` avoids installing account/trading skills in a read-only starter. The command was verified in a temporary project for Codex, Claude Code, and Cursor. Official skill list: https://github.com/okx/agent-skills ; installer options: https://github.com/vercel-labs/skills
 
 ## Market Risk Copilot example
 

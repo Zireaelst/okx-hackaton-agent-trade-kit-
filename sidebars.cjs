@@ -2,6 +2,9 @@ module.exports = {
   atk: [
     { type: 'category', label: 'OKX TR Agent Trade Kit', items: [
       'atk/intro', 'atk/quickstart', 'atk/mcp', 'atk/cli-skills',
+      { type: 'category', label: 'İstemciye göre kurulum', items: [
+        'atk/setup-codex', 'atk/setup-claude-code', 'atk/setup-cursor',
+      ] },
       'atk/data-ideas', 'atk/demo', 'atk/safety', 'atk/troubleshooting',
     ] },
   ],

@@ -33,7 +33,7 @@ OKX_SITE=tr okx market ticker BTC-USDT
 
 ## 4. Agent'a bağla
 
-İstemciniz Codex, Claude Code veya Cursor ise [MCP kurulumuna](./mcp.md) geçin. Sadece terminalden veri okuyacaksanız kurulum burada tamamdır.
+Kullandığınız istemci için [Codex](./setup-codex.md), [Claude Code](./setup-claude-code.md) veya [Cursor](./setup-cursor.md) kurulumuna geçin. Her rehber MCP, CLI ve Skills'i ayrı adımlarda doğrular. Sadece terminalden veri okuyacaksanız kurulum burada tamamdır.
 
 :::tip
 Anahtar isteyen hesap veya işlem örneklerine geçmeden önce [izinler ve güvenlik](./safety.md) sayfasını okuyun. API anahtarını, secret key'i veya passphrase'i sohbet penceresine yapıştırmayın.

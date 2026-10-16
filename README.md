@@ -25,6 +25,7 @@ Statik çıktı `build/` klasöründedir. `vercel.json` kurulum, build ve çıkt
 ## İçerik düzeni
 
 - `docs/atk/`: OKX TR Agent Trade Kit rehberi
+- `docs/atk/setup-*.md`: Codex, Claude Code ve Cursor için ayrı CLI, MCP, Skills kurulumları
 - `docs/onchainos/`: OnchainOS rehberi
 - `docs/okx-ai/`: OKX.ai rehberi
 - `static/llms.txt`, `static/llms-full.txt`: İngilizce agent bağlamı

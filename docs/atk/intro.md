@@ -22,7 +22,7 @@ Skills tek başına bir borsa bağlantısı değildir; ilgili beceriler, kurulu 
 ## Nereden başlamalı?
 
 1. [5 dakikalık başlangıç](./quickstart.md) ile anahtarsız veri okuyun.
-2. Kullandığınız istemciyi [MCP ile bağlayın](./mcp.md).
+2. [Codex](./setup-codex.md), [Claude Code](./setup-claude-code.md) veya [Cursor](./setup-cursor.md) kurulumunu izleyin.
 3. [Rehberli demoda](./demo.mdx) ticker, order book ve mum verisini birleştirin.
 4. Projenize uygun veri kaynaklarını ve [hackathon fikirlerini](./data-ideas.md) seçin.
 

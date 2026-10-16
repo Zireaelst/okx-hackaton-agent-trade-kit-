@@ -18,9 +18,14 @@ Son manuel kontrol: **16 Ekim 2026**. Bu dosya topluluk rehberinin kaynağını 
 | İstemci setup ve izinler | https://github.com/okx/agent-trade-kit/blob/github-main/docs/configuration.md | Claude Code/Cursor için `--modules market`; profile gerekmeden public data. Ancak setup `--site` kabul etmiyor; TR için doğrudan MCP kaydı yazıldı. |
 | CLI sözdizimi | https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md | MCP araç adından CLI komutu uydurulmuyor. |
 | Skills | https://github.com/okx/agent-skills | Skills'in CLI bağımlılığı belirtildi. |
+| Skills kurulum seçenekleri | https://github.com/vercel-labs/skills#readme | `--skill okx-cex-market --agent codex/claude-code/cursor --copy --yes` geçici proje klasöründe çalıştırıldı; yalnız piyasa becerisi kuruldu. |
 | Codex MCP biçimi | https://developers.openai.com/learn/docs-mcp | `codex mcp add … -- …` yapısı esas alındı. |
+| Claude Code MCP biçimi | https://code.claude.com/docs/en/mcp | `claude mcp add --transport stdio` ve `claude mcp list` yerel yardım çıktısına karşı kontrol edildi. |
+| Cursor Skills görünürlüğü | https://cursor.com/help/customization/skills | Proje `.agents/skills/` klasörü destekleniyor. |
 
 **Bölge doğrulaması:** Kurulu ATK CLI 1.4.7 ve MCP 1.4.8 varsayılanı `global`; her iki pakette `tr` sitesi `https://tr.okx.com` adresine eşleniyor. `OKX_SITE=tr okx market ticker BTC-USDT --json` 16 Ekim 2026 tarihinde salt okunur olarak başarılı oldu. MCP `--site tr` bayrağı ve Claude Code doğrudan MCP kaydı yerel `--help`/paket koduna karşı doğrulandı. Cursor için aynı MCP argümanları JSON kaydıyla verildi.
+
+**İstemci rehberleri:** Codex, Claude Code ve Cursor için CLI, MCP ve Skills ayrı sayfalara ayrıldı. Kurulum komutları kullanıcı yapılandırmasına yazılmadan, paket yardım çıktısı ve geçici klasördeki Skills kurulumu ile doğrulandı. Kullanıcının IDE içindeki izin/onay ekranı hesap durumuna bağlı olabileceği için rehber bu ekranı taklit etmez.
 
 **Uyuşmazlıklar:** OKX TR agent sayfasındaki araç/modül listesi, GitHub README'sindeki daha geniş listeden geride kalabiliyor. Bu nedenle sitede sabit bir toplam araç sayısı yoktur. Önceki sunum sohbetinde geçen uzaktan OAuth MCP yolu mevcut ATK kaynaklarıyla doğrulanmadığından rehbere alınmadı. GitHub README'sindeki “build from source” örneğinde depo adının başka biçimde yazıldığı görülüyor; bu yol rehbere alınmadı.
 

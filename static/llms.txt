@@ -10,6 +10,9 @@ Use read-only market data by default. Never request or expose API keys, secret k
 - [ATK introduction](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/intro): Human-readable Turkish guide.
 - [ATK quick start](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/quickstart): Public market-data first query.
 - [ATK MCP setup](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/mcp): Codex, Claude Code, and Cursor.
+- [Codex setup](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/setup-codex): CLI, MCP, and the read-only market skill.
+- [Claude Code setup](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/setup-claude-code): CLI, MCP, and the read-only market skill.
+- [Cursor setup](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/setup-cursor): CLI, MCP, and the read-only market skill.
 - [Guided demo](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/demo): Clearly labeled simulated data.
 
 ## Other Product Guides
