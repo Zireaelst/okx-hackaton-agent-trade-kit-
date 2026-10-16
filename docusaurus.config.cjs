@@ -2,7 +2,7 @@ const config = {
   title: 'OKX Hackathon Rehberi',
   tagline: 'Agent araçlarıyla keşfet, öğren, üret.',
   favicon: 'img/favicon.svg',
-  url: 'https://okx-hackaton-agent-trade-kit.vercel.app',
+  url: 'https://okx-tr-atk-hackathon-guide.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   markdown: { hooks: { onBrokenMarkdownLinks: 'throw' } },

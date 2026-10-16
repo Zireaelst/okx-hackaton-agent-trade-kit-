@@ -1,6 +1,6 @@
 You are helping me build a hackathon project with OKX TR Agent Trade Kit (ATK).
 
-Read the community guide at https://okx-hackaton-agent-trade-kit.vercel.app/llms.txt and the official sources it links. Prefer the current official repository when commands or feature lists disagree with an older documentation page. State which sources and versions you used.
+Read the community guide at https://okx-tr-atk-hackathon-guide.vercel.app/llms.txt and the official sources it links. Prefer the current official repository when commands or feature lists disagree with an older documentation page. State which sources and versions you used.
 
 First, use public read-only ATK market data to inspect BTC-USDT: ticker, first five order-book levels, and the last six completed 1-hour candles. Compute spread in basis points and the completed-candle price range. Show instrument, timestamps, raw fields used, calculations, and any missing data. Do not invent live prices.
 

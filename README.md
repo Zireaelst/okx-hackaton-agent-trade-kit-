@@ -2,6 +2,8 @@
 
 Hackathon katılımcıları için hazırlanmış bağımsız Türkçe dokümantasyon sitesi. Ana odak **OKX TR Agent Trade Kit**; OnchainOS ve OKX.ai ayrı rehberlerdir. Resmî OKX yayını değildir.
 
+**Canlı site:** https://okx-tr-atk-hackathon-guide.vercel.app/
+
 ## Yerelde çalıştır
 
 Node.js 20+ kullanın:
@@ -18,7 +20,7 @@ npm test
 npm run build
 ```
 
-Statik çıktı `build/` klasöründedir. Vercel'de Framework Preset **Docusaurus**, build komutu `npm run build`, output directory `build` olmalıdır. GitHub deposu `Zireaelst/okx-hackaton-agent-trade-kit-` bağlandığında `main` dalındaki değişiklikler dağıtılabilir.
+Statik çıktı `build/` klasöründedir. `vercel.json` kurulum, build ve çıktı klasörünü tanımlar. Vercel projesi bu GitHub deposuna bağlıdır; `main` dalındaki değişiklikler production dağıtımı başlatır.
 
 ## İçerik düzeni
 
@@ -33,4 +35,4 @@ Yeni komut veya özellik eklerken önce ilgili resmî kaynağı doğrulayın; sa
 
 ## Yayın notu
 
-`docusaurus.config.cjs`, `static/llms.txt` ve `static/ai/starter-prompt.txt` içindeki site adresi Vercel'in verdiği gerçek production URL ile aynı olmalıdır. Önizleme ve production URL'leri doğrulanmadan başka bir alan adına yönlendirme yapılmamalıdır.
+`docusaurus.config.cjs`, `static/llms.txt` ve `static/ai/starter-prompt.txt` içindeki site adresi production URL ile aynı tutulmalıdır. Demo verileri temsili ve salt okunurdur.

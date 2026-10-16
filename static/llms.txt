@@ -6,16 +6,16 @@ Use read-only market data by default. Never request or expose API keys, secret k
 
 ## Agent Trade Kit
 
-- [Complete English agent context](https://okx-hackaton-agent-trade-kit.vercel.app/llms-full.txt): ATK installation, MCP/CLI/Skills, safety, and source links.
-- [ATK introduction](https://okx-hackaton-agent-trade-kit.vercel.app/guide/atk/intro): Human-readable Turkish guide.
-- [ATK quick start](https://okx-hackaton-agent-trade-kit.vercel.app/guide/atk/quickstart): Public market-data first query.
-- [ATK MCP setup](https://okx-hackaton-agent-trade-kit.vercel.app/guide/atk/mcp): Codex, Claude Code, and Cursor.
-- [Guided demo](https://okx-hackaton-agent-trade-kit.vercel.app/guide/atk/demo): Clearly labeled simulated data.
+- [Complete English agent context](https://okx-tr-atk-hackathon-guide.vercel.app/llms-full.txt): ATK installation, MCP/CLI/Skills, safety, and source links.
+- [ATK introduction](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/intro): Human-readable Turkish guide.
+- [ATK quick start](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/quickstart): Public market-data first query.
+- [ATK MCP setup](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/mcp): Codex, Claude Code, and Cursor.
+- [Guided demo](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/demo): Clearly labeled simulated data.
 
 ## Other Product Guides
 
-- [OnchainOS guide](https://okx-hackaton-agent-trade-kit.vercel.app/guide/onchainos/intro): Separate onchain developer infrastructure.
-- [OKX.ai guide](https://okx-hackaton-agent-trade-kit.vercel.app/guide/okx-ai/intro): Separate agent marketplace.
+- [OnchainOS guide](https://okx-tr-atk-hackathon-guide.vercel.app/guide/onchainos/intro): Separate onchain developer infrastructure.
+- [OKX.ai guide](https://okx-tr-atk-hackathon-guide.vercel.app/guide/okx-ai/intro): Separate agent marketplace.
 
 ## Official Sources
 
