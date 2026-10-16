@@ -56,17 +56,20 @@
 .demoStat strong { display: block; font-size: 1.3rem; }
 .clientSection { background: #090d0e; color: #f7faf9; padding: 3.4rem 0 3rem; }
 .clientSection h2 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.7rem); margin-bottom: .5rem; }
+.clientProductLogo { display: block; width: min(16rem, 70vw); height: auto; margin-bottom: 1.5rem; }
 .clientEyebrow { color: #84e8bd; text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 800; margin-bottom: .5rem; }
 .clientIntro, .clientFootnote { color: #c7d4cf; }
 .clientFootnote { font-size: .88rem; margin: 1.4rem 0 0; }
 .clientFootnote a { color: #96f0c7; }
 .clientStrip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .8rem; margin-top: 2rem; }
-.clientBrand { min-height: 6rem; display: flex; align-items: center; justify-content: center; gap: .6rem; padding: .9rem; border: 1px solid #42514d; border-radius: 14px; color: #fff; text-decoration: none; background: #151c1b; transition: background .15s, transform .15s; }
-.clientBrand:hover, .clientBrand:focus-visible { color: #fff; background: #23332e; text-decoration: none; transform: translateY(-2px); }
-.clientMark { font-size: 1.9rem; line-height: 1; color: #a3ebc9; }
-.clientText { display: flex; flex-direction: column; min-width: 0; }
-.clientText strong { font-size: clamp(.95rem, 1.4vw, 1.25rem); line-height: 1.15; }
-.clientText small { color: #c2d1ca; font-size: .72rem; }
+.clientCard { display: flex; flex-direction: column; justify-content: space-between; gap: .35rem; padding: .8rem; border: 1px solid #3c4c47; border-radius: 14px; background: #141b19; }
+.clientBrand { min-height: 7.4rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .3rem; color: #f7faf9; text-decoration: none; transition: transform .15s; }
+.clientBrand:hover, .clientBrand:focus-visible { color: #fff; text-decoration: none; transform: translateY(-2px); }
+.clientBrand img { display: block; width: 100%; height: 4.6rem; object-fit: contain; }
+.clientBrand span { color: #c8d9d0; font-size: .77rem; }
+.clientCopy { width: 100%; border: 1px solid #5a776b; border-radius: 8px; padding: .48rem .35rem; background: #21342d; color: #d8ffe8; font: inherit; font-size: .77rem; font-weight: 700; cursor: pointer; }
+.clientCopy:hover, .clientCopy:focus-visible { background: #2f5443; border-color: #a7efc9; }
+.clientCopyStatus { color: #bbf2d3; margin: .85rem 0 0; font-size: .9rem; }
 .pathFinder, .paymentDemo { border: 1px solid var(--guide-card-border); border-radius: 18px; padding: 1.5rem; background: var(--guide-card-bg); margin: 1.5rem 0 2rem; }
 .pathFinderFields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .pathFinderFields label { color: var(--ifm-font-color-base); font-weight: 650; }

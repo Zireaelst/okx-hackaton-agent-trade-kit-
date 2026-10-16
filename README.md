@@ -35,6 +35,7 @@ Statik çıktı `build/` klasöründedir. `vercel.json` kurulum, build ve çıkt
 - `static/llms.txt`, `static/llms-full.txt`: İngilizce agent bağlamı
 - `static/ai/starter-prompt.txt`: Codex/Claude Code başlangıç prompt'u
 - `static/ai/prompts/`: üç projeye özel İngilizce agent prompt'u
+- `assets/`: ana sayfa istemci şeridinde kullanılan ATK ve istemci logoları
 - `SOURCE_AUDIT.md`: kaynak önceliği, kontrol tarihi ve bilinen uyuşmazlıklar
 
 Yeni komut veya özellik eklerken önce ilgili resmî kaynağı doğrulayın; sayfanın altına kaynak URL'si ve kontrol tarihini yazın. Gerçek fiyatları dokümana sabitlemeyin. API anahtarı, secret, passphrase veya özel anahtar commit etmeyin.
