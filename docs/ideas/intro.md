@@ -1,23 +1,24 @@
 ---
 title: Hackathon fikirleri
-description: Agent ödemeleri, hizmetler ve güvenli iş akışları ağırlıklı 20 OKX hackathon fikri.
+description: ATK odaklı veri, agent ödemeleri ve hizmetler için 31 OKX hackathon fikri.
 ---
 
 # Hackathon fikirleri
 
-Bu seçkideki **20 fikir**, geliştirilebilecek topluluk prototipleridir; hazır OKX ürünleri, resmî yarışma kategorileri veya ödül vaadi değildir. Rehberin ana konusu [OKX TR Agent Trade Kit](../atk/intro.md) olmaya devam ediyor. Fikirler ise ağırlıkla **agentic payment, hizmet pazaryeri, veri kalitesi ve güvenli otomasyon** üzerine kurulu. Böylece hackathon projesi için alım satım ekranı yapmak gerekmez.
+Bu seçkideki **31 fikir**, geliştirilebilecek topluluk prototipleridir; hazır OKX ürünleri, resmî yarışma kategorileri veya ödül vaadi değildir. Ana odak [OKX TR Agent Trade Kit](../atk/intro.md): 16 fikir ATK verisiyle başlıyor. Diğer fikirler **agentic payment, hizmet pazaryeri ve güvenli otomasyon** için OnchainOS ile OKX.ai'yi ayrı ürünler olarak kullanıyor. Alım satım ekranı yapmak gerekmez.
 
 | Alan | Fikir | Nasıl başlanır? |
 | --- | ---: | --- |
-| [ATK: veri ve eğitim araçları](./atk.md) | 5 | Anahtarsız piyasa verisi veya temsili hesap verisi |
+| [ATK: veri, eğitim ve servis fikirleri](./atk.md) | 16 | Anahtarsız piyasa verisi, erişime bağlı haber/hesap verisi |
 | [OnchainOS: ödemeler ve cüzdan deneyimi](./onchainos.md) | 9 | Yerel, temsili ödeme akışı; canlı API erişimi ayrı |
 | [OKX.ai: agent hizmetleri](./okx-ai.md) | 6 | Görev, teslim ve değerlendirme simülasyonu |
 
-## Öne çıkan üç trade dışı başlangıç
+## Öne çıkan dört trade dışı başlangıç
 
-1. **[402 Ödeme Laboratuvarı](./onchainos.md#6-402-ödeme-laboratuvarı):** Ücretli bir API isteğinin “erişim isteği → ödeme talebi → onay → sonuç” yolculuğunu yerel olarak canlandır.
-2. **[Agent Harcama Onayı](./onchainos.md#7-agent-harcama-onayı):** Agent'ın ücretli bir araca erişmeden önce maliyet, alıcı ve üst sınırı kullanıcıya açıklamasını tasarla.
-3. **[Hizmet Talebi Oluşturucu](./okx-ai.md#15-hizmet-talebi-oluşturucu):** Belirsiz bir isteği teslim biçimi, kabul ölçütü ve bütçe sınırı açık bir agent görevine dönüştür.
+1. **[ATK Veri Kalitesi Panosu](./atk.md#1-veri-kalitesi-panosu):** Anahtarsız veriyi sorgula; eski veya eksik yanıtı görünür kıl.
+2. **[ATK verisinden agent hizmeti](./atk.md#16-atk-verisini-ücretli-servise-dönüştürme):** Veri kaynağını, servis katmanını ve temsili ödeme adımını ayrı göster.
+3. **[402 Ödeme Laboratuvarı](./onchainos.md#17-402-ödeme-laboratuvarı):** Ücretli bir API isteğinin “erişim isteği → ödeme talebi → onay → sonuç” yolculuğunu yerel olarak canlandır.
+4. **[Hizmet Talebi Oluşturucu](./okx-ai.md#26-hizmet-talebi-oluşturucu):** Belirsiz bir isteği teslim biçimi, kabul ölçütü ve bütçe sınırı açık bir agent görevine dönüştür.
 
 ## Bir fikri hafta sonu demosuna dönüştür
 
