@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import ClientStrip from '../components/ClientStrip';
 
 const guides = [
   { tag: 'ANA REHBER', title: 'OKX TR Agent Trade Kit', text: 'MCP, CLI ve Skills ile piyasa verisinden çalışan hackathon prototipine ilerle.', href: '/guide/atk/intro' },
@@ -16,11 +17,12 @@ export default function Home() {
         <h1>Agent araçlarıyla fikrini çalışan bir prototipe dönüştür.</h1>
         <p>OKX TR Agent Trade Kit ile başla. Kurulumu adım adım izle, salt okunur örnekleri dene ve Codex veya Claude Code için hazır bağlamı kullan.</p>
         <div className="button-group">
-          <Link className="button button--primary button--lg" to="/guide/atk/quickstart">5 dakikada başla</Link>
+          <Link className="button button--primary button--lg" to="/guide/start/intro">Sana uygun yolu bul</Link>
           <Link className="button button--outline button--secondary button--lg" to="/ai">AI paketini al</Link>
           <Link className="button button--outline button--secondary button--lg" to="/guide/ideas/intro">31 proje fikrine bak</Link>
         </div>
       </div></section>
+      <ClientStrip />
       <section className="container"><div className="guideGrid">
         {guides.map((guide) => <Link key={guide.title} className="guideCard" to={guide.href}><span className="tag">{guide.tag}</span><h3>{guide.title} →</h3><p>{guide.text}</p></Link>)}
       </div></section>

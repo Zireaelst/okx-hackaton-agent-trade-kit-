@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import { PromptCopy } from '../components/GuideWidgets';
 
 export default function AiPack() {
   const [message, setMessage] = useState('');
@@ -30,6 +31,13 @@ export default function AiPack() {
         <Link className="guideCard" to="pathname:///llms.txt"><span className="tag">Kısa harita</span><h3>llms.txt →</h3><p>Kaynakları ve ürün sınırlarını gösterir.</p></Link>
         <Link className="guideCard" to="pathname:///llms-full.txt"><span className="tag">Tam bağlam</span><h3>llms-full.txt →</h3><p>Komutlar, örnek akış ve güvenlik sınırları.</p></Link>
         <Link className="guideCard" to="/guide/atk/quickstart"><span className="tag">İnsan rehberi</span><h3>5 dakikada başla →</h3><p>Türkçe ve adım adım kurulum.</p></Link>
+      </div>
+      <h2>Projeye özel prompt seç</h2>
+      <p>Üç reçete, kapsamı ve test ölçütlerini ayrı tanımlar. İlgili rehberi okuduktan sonra prompt'u agent'a ver.</p>
+      <div className="promptGrid">
+        <div><h3>ATK Veri Kalitesi Panosu</h3><p>Anahtarsız, salt okunur veri denetimi.</p><PromptCopy src="/ai/prompts/atk-data-quality.txt" /></div>
+        <div><h3>ATK verisinden agent hizmeti</h3><p>Yerel JSON prototipi ve A2MCP yol haritası.</p><PromptCopy src="/ai/prompts/atk-a2mcp.txt" /></div>
+        <div><h3>402 Ödeme Laboratuvarı</h3><p>Cüzdansız ve tamamen temsili ödeme deneyimi.</p><PromptCopy src="/ai/prompts/payment-402.txt" /></div>
       </div>
     </main>
   </Layout>;

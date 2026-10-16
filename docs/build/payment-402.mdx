@@ -1,0 +1,53 @@
+---
+title: 402 Ödeme Laboratuvarı
+description: Cüzdan ve gerçek ödeme olmadan HTTP 402 kullanıcı akışını deneyen proje reçetesi.
+---
+
+import { PaymentFlowDemo, PromptCopy } from '@site/src/components/GuideWidgets';
+
+# 402 Ödeme Laboratuvarı
+
+<span className="feasibilityBadge feasibilityBadge--warn">Tamamen temsili</span> <span className="feasibilityBadge">Cüzdansız başlangıç</span>
+
+**Kullanıcı sorusu:** “Bir agent ücretli içeriğe rastladığında, ödeme istemini ve insan kararını nasıl anlaşılır gösterir?” OnchainOS Payments belgeleri ücretli HTTP akışlarını açıklar. Buradaki küçük yerel sunucu ise yalnız **HTTP 402 durum kodunu öğretir**. Gerçek x402/MPP challenge, imza, zincir üstü ödeme veya settlement uygulamaz. ATK bu akışın ödeme katmanı değildir; ileride ücretli bir ATK veri hizmeti tasarlanabilir.
+
+## Akışı ekranda dene
+
+<PaymentFlowDemo />
+
+Onay, ret ve süre dolumu yollarını ayrı ayrı dene. Her durumda veri ve tutar temsili olarak kalır.
+
+## HTTP örneğini çalıştır
+
+[Bu sitenin deposunu](https://github.com/Zireaelst/okx-hackaton-agent-trade-kit-) indir. Kök klasörde:
+
+```bash
+node examples/payment-402/server.mjs
+```
+
+İkinci terminalde ilk isteği yap:
+
+```bash
+curl -i http://127.0.0.1:8788/summary
+```
+
+`402 Payment Required` ve `demo: true` döner. Yalnızca yerel örnekteki sahte onayı dene:
+
+```bash
+curl -i -H 'x-demo-approved: yes' http://127.0.0.1:8788/summary
+```
+
+Bu yanıt `200` ve `paymentExecuted: false` verir. **`x-demo-approved` ödeme kanıtı değildir; gerçek bir serviste kullanılmamalıdır.** Sunucu yalnız `127.0.0.1` üzerinde dinler. Gerçek USDT fiyatlandırması veya erişim hakkı oluşturmaz.
+
+## Ürünleştirme kontrol listesi
+
+1. Ücretli kaynağı ve ücretsiz önizlemeyi ayır; kullanıcıya tutarı, ağı, alıcıyı ve ödeme koşulunu göster.
+2. [OnchainOS Payments yöntemlerinden](https://web3.okx.com/onchainos/dev-docs/payments/api-overview) uygun olanı seç; kullanılan yöntemin güncel durumunu ve geliştirici erişimini doğrula.
+3. Resmî protokolün challenge ve ödeme doğrulamasını uygula; sahte yerel başlığı kaldır. Tekrar deneme, ret, süre dolumu ve çift ödeme durumlarını ele al.
+4. Gerçek imza veya transferden önce insan onayı al. Sırları ve imzalama verisini sohbete veya repoya koyma.
+
+**Tamamlanma ölçütü:** İzleyici 402, temsili onay, ret ve süre dolumu durumlarını ayırt eder; ekranda gerçek ödeme yapılmadığı sürekli görünür.
+
+<PromptCopy src="/ai/prompts/payment-402.txt" />
+
+**Kaynak kontrolü: 17 Ekim 2026.** [OnchainOS Payments API](https://web3.okx.com/onchainos/dev-docs/payments/api-overview) · [HTTP ödeme belgeleri](https://web3.okx.com/onchainos/dev-docs/payments/api-http). Yerel sunucu ve tutar topluluk örneğidir.

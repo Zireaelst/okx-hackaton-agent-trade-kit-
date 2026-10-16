@@ -54,4 +54,38 @@
 .demoStats { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; margin: 1.4rem 0; }
 .demoStat { padding: 1rem; border-radius: 12px; background: var(--ifm-color-emphasis-100); }
 .demoStat strong { display: block; font-size: 1.3rem; }
+.clientSection { background: #090d0e; color: #f7faf9; padding: 3.4rem 0 3rem; }
+.clientSection h2 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.7rem); margin-bottom: .5rem; }
+.clientEyebrow { color: #84e8bd; text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 800; margin-bottom: .5rem; }
+.clientIntro, .clientFootnote { color: #c7d4cf; }
+.clientFootnote { font-size: .88rem; margin: 1.4rem 0 0; }
+.clientFootnote a { color: #96f0c7; }
+.clientStrip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .8rem; margin-top: 2rem; }
+.clientBrand { min-height: 6rem; display: flex; align-items: center; justify-content: center; gap: .6rem; padding: .9rem; border: 1px solid #42514d; border-radius: 14px; color: #fff; text-decoration: none; background: #151c1b; transition: background .15s, transform .15s; }
+.clientBrand:hover, .clientBrand:focus-visible { color: #fff; background: #23332e; text-decoration: none; transform: translateY(-2px); }
+.clientMark { font-size: 1.9rem; line-height: 1; color: #a3ebc9; }
+.clientText { display: flex; flex-direction: column; min-width: 0; }
+.clientText strong { font-size: clamp(.95rem, 1.4vw, 1.25rem); line-height: 1.15; }
+.clientText small { color: #c2d1ca; font-size: .72rem; }
+.pathFinder, .paymentDemo { border: 1px solid var(--guide-card-border); border-radius: 18px; padding: 1.5rem; background: var(--guide-card-bg); margin: 1.5rem 0 2rem; }
+.pathFinderFields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.pathFinderFields label { color: var(--ifm-font-color-base); font-weight: 650; }
+.pathFinderFields select { display: block; width: 100%; margin-top: .5rem; padding: .65rem .8rem; border: 1px solid var(--guide-card-border); border-radius: 9px; background: var(--guide-card-bg); color: var(--ifm-font-color-base); font: inherit; }
+.pathFinderResult { margin-top: 1.5rem; padding: 1.35rem; border-radius: 12px; background: var(--ifm-color-emphasis-100); }
+.pathFinderResult h3 { margin-top: .8rem; }
+.pathFinderResult p, .promptBox p, .paymentDemo p { color: var(--guide-muted); }
+.feasibilityBadge { display: inline-block; background: var(--guide-step-bg); color: var(--guide-step-text); border-radius: 999px; padding: .25rem .65rem; font-size: .75rem; font-weight: 750; vertical-align: middle; margin: 0 .25rem .35rem 0; }
+.feasibilityBadge--warn { background: #fff0d3; color: #684411; }
+[data-theme='dark'] .feasibilityBadge--warn { background: #4b351c; color: #ffe2a5; }
+.promptBox { border: 1px solid var(--guide-card-border); border-radius: 14px; padding: 1rem; background: var(--guide-card-bg); margin: 1rem 0 2rem; }
+.promptBox p { margin: .35rem 0 1rem; }
+.promptStatus { margin: 1rem 0 0 !important; }
+.promptGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.promptGrid > div { border: 1px solid var(--guide-card-border); border-radius: 16px; padding: 1rem; background: var(--guide-card-bg); }
+.promptGrid .promptBox { margin-bottom: 0; }
+.paymentTimeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; margin: 1.2rem 0; }
+.paymentTimeline span { padding: .7rem .5rem; text-align: center; background: var(--ifm-color-emphasis-100); color: var(--guide-muted); border-radius: 8px; font-size: .85rem; }
+.paymentTimeline .isActive { background: var(--guide-step-bg); color: var(--guide-step-text); font-weight: 750; }
+@media (max-width: 996px) { .clientStrip { grid-template-columns: repeat(3, minmax(0, 1fr)); } .pathFinderFields, .promptGrid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .clientStrip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .paymentTimeline { grid-template-columns: repeat(2, 1fr); } .clientSection { padding: 2.5rem 0; } }
 @media (max-width: 760px) { .guideGrid { grid-template-columns: 1fr; } .heroGuide { padding: 3rem 0; } .demoStats { grid-template-columns: 1fr; } }

@@ -1,0 +1,33 @@
+---
+title: Buradan başla
+description: Hackathon için doğru OKX ürününü, istemci kurulumunu ve ilk proje reçetesini seç.
+---
+
+import { PathFinder } from '@site/src/components/GuideWidgets';
+
+# Buradan başla
+
+Bir hafta sonu prototipi için önce **tek bir kullanıcı sorusu** seç. Bu sayfa, erişim durumuna ve kullandığın istemciye göre ilk uygulanabilir yolu gösterir. Site, OKX tarafından yayımlanmış resmî bir rehber değildir.
+
+## Sana uygun yolu seç
+
+<PathFinder />
+
+## Üç kısa yol
+
+| İstediğin sonuç | İlk ürün | Yapabileceğin ilk demo |
+| --- | --- | --- |
+| Veriyi okuyup kalite veya eğitim aracı yapmak | [OKX TR Agent Trade Kit](../atk/intro.md) | [ATK Veri Kalitesi Panosu](../build/atk-data-quality.mdx), anahtarsız |
+| ATK verisini diğer agent'lara hizmet olarak sunmak | ATK + ayrı servis katmanı | [ATK verisinden A2MCP yol haritası](../build/atk-a2mcp.mdx), ücretsiz örnek |
+| Ücretli agent çağrısının kullanıcı deneyimini göstermek | [OnchainOS Payments](../onchainos/intro.md) | [Temsili 402 akışı](../build/payment-402.mdx), cüzdansız |
+
+## Kurulumdan demoya dört adım
+
+1. [ATK'nin ne sağladığını](../atk/intro.md) ve [MCP, CLI, Skills farkını](../atk/cli-skills.md) öğren.
+2. [Anahtarsız ilk sorguyu](../atk/quickstart.md) çalıştır veya ödeme fikrinde temsili akıştan başla.
+3. Bir [proje reçetesi](../build/atk-data-quality.mdx) seç; örnek veriyi çalıştır ve iki hata durumunu göster.
+4. Reçetedeki proje prompt'unu Codex veya Claude Code'a ver; çıktıyı resmî kaynak ve veri zamanıyla kontrol et.
+
+**Erişim sınırı:** ATK `market` sorguları anahtarsız başlanabilir. Hesap verisi okuma yetkisi ister. OnchainOS ödemesi veya OKX.ai marketplace kullanımı ATK kurulumu ile otomatik açılmaz; her ürünün erişimini ayrı doğrula. Gerçek emir, ödeme, imza veya transferden önce parametreleri gösterip insan onayı al. Sohbette kimlik bilgisi isteme.
+
+**Kaynak kontrolü: 17 Ekim 2026.** [ATK deposu](https://github.com/okx/agent-trade-kit) · [OnchainOS Payments](https://web3.okx.com/onchainos/dev-docs/payments/api-overview) · [OKX.ai A2MCP](https://web3.okx.com/onchainos/dev-docs/okxai/howtomcp).

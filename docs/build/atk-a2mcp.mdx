@@ -1,0 +1,58 @@
+---
+title: ATK verisinden agent hizmeti
+description: ATK verisini salt okunur bir HTTP servisiyle sunan, A2MCP entegrasyonuna hazırlık reçetesi.
+---
+
+import { PromptCopy } from '@site/src/components/GuideWidgets';
+
+# ATK verisinden agent hizmeti
+
+<span className="feasibilityBadge">ATK · Anahtarsız prototip</span> <span className="feasibilityBadge feasibilityBadge--warn">A2MCP kaydı yapılmaz</span>
+
+**Kullanıcı sorusu:** “Başka bir agent, kaynağı ve veri kalitesi belli bir piyasa özetini nasıl alır?” Bu reçete ATK'nin herkese açık ticker verisini kullanan küçük bir **JSON HTTP prototipi** kurar. ATK veri kaynağıdır; servis ve olası A2MCP dağıtımı ayrı katmanlardır.
+
+## Önce yerel servisi çalıştır
+
+[Bu sitenin deposunu](https://github.com/Zireaelst/okx-hackaton-agent-trade-kit-) indir. Kök klasörde:
+
+```bash
+node examples/atk-service/server.mjs
+```
+
+Başka terminalde:
+
+```bash
+curl 'http://127.0.0.1:8787/summary?instId=BTC-USDT'
+```
+
+Yanıtta `mode: "simulated-fixture"`, `source: "Local simulated JSON fixture"` ve `quality.spreadBps: 200` görürsün. **Fiyatlar temsili; canlı veri değildir.** Sunucu yalnız `BTC-USDT` kabul eder. Başka enstrüman için `400`, bilinmeyen yol için `404` döndürür.
+
+## İstersen ATK ile canlı, salt okunur veriye geç
+
+[CLI kurulumunu](../atk/quickstart.md) tamamladıktan sonra sunucuyu durdur ve şu seçenekle yeniden aç:
+
+```bash
+node examples/atk-service/server.mjs --live
+```
+
+Sunucu her istek için `OKX_SITE=tr okx market ticker BTC-USDT --json` çalıştırır ve yanıtı `live-read-only` olarak işaretler. ATK yanıtı okunamazsa `502` döner; örnek veriyle sessizce değiştirmez. Bu mod emir vermez, hesap sorgulamaz ve API anahtarı istemez.
+
+## Hizmet sözleşmesini netleştir
+
+| Alan | Bu prototipteki karar |
+| --- | --- |
+| Girdi | Yalnız `instId=BTC-USDT` |
+| Çıktı | `mode`, `source`, `instrument`, kaynak zamanı ve kalite sonucu |
+| Güvenilirlik | Eksik, eski veya ters bid/ask ayrı uyarı; geçersiz spread `null` |
+| Hata | Geçersiz girdi `400`, veri okunamazsa `502` |
+| Erişim | Yalnız `127.0.0.1`; kimlik doğrulama ve ücretlendirme yok |
+
+## A2MCP'ye geçişte doğrulanacaklar
+
+Bu örnek **MCP sunucusu, A2MCP kaydı veya OKX.ai marketplace hizmeti değildir**. Agent'ların uzaktan kullanabileceği gerçek hizmet için [OKX.ai A2MCP rehberindeki](https://web3.okx.com/onchainos/dev-docs/okxai/howtomcp) güncel kayıt ve araç şemasını, herkese açık HTTPS adresini, erişim kontrolünü, oran sınırını ve hata sözleşmesini ayrıca uygula. Ücretlendirme istiyorsan [OnchainOS Payments](https://web3.okx.com/onchainos/dev-docs/payments/api-overview) ayrı entegrasyondur. Demo bunların çalıştığını iddia etmez.
+
+**Tamamlanma ölçütü:** Bir istek örnek özeti, hatalı enstrüman `400`, veri okunamaması `502` gösterir. Her yanıtta temsili/canlı kaynak açıkça görünür.
+
+<PromptCopy src="/ai/prompts/atk-a2mcp.txt" />
+
+**Kaynak kontrolü: 17 Ekim 2026.** [ATK CLI başvurusu](https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md) · [OKX.ai A2MCP](https://web3.okx.com/onchainos/dev-docs/okxai/howtomcp) · [OnchainOS Payments](https://web3.okx.com/onchainos/dev-docs/payments/api-overview). Servis tasarımı topluluk prototipidir.

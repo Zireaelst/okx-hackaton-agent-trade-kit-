@@ -1,0 +1,58 @@
+---
+title: ATK Veri Kalitesi Panosu
+description: Anahtarsız ATK ticker verisinden güvenilirlik kontrolü yapan proje reçetesi.
+---
+
+import { PromptCopy } from '@site/src/components/GuideWidgets';
+
+# ATK Veri Kalitesi Panosu
+
+<span className="feasibilityBadge">ATK · Anahtarsız başlangıç</span> <span className="feasibilityBadge">Salt okunur</span>
+
+**Kullanıcı sorusu:** “Agent'ın okuduğu piyasa verisi eksik, gecikmiş veya tutarsız mı?” Bu reçete önce sabit bir **temsili** örneği çalıştırır, ardından istersen OKX TR'nin herkese açık ticker verisini okur. Piyasa yorumu veya al/sat sinyali üretmez.
+
+## Ne inşa edeceksin?
+
+```text
+ATK public ticker → alan ve zaman denetimi → gerekçeli durum kartı
+                     ↳ eksik / eski / ters bid-ask uyarısı
+```
+
+Girdi: `instId`, `ts`, `last`, `bidPx`, `askPx`. Çıktı: enstrüman, kaynak zamanı, veri yaşı, spread hesabı ve gerekçeli uyarılar. **Spread bps** = `(ask − bid) / ((ask + bid) / 2) × 10.000`. Geçersiz bid/ask varsa spread hesaplanmaz.
+
+## 1. Sabit örneği çalıştır
+
+Bu sitenin [GitHub deposunu](https://github.com/Zireaelst/okx-hackaton-agent-trade-kit-) bilgisayarına indirip kök klasörde çalıştır:
+
+```bash
+node examples/market-quality/analyze.mjs
+```
+
+Komut [temsili JSON dosyasını](https://github.com/Zireaelst/okx-hackaton-agent-trade-kit-/blob/main/examples/market-quality/ticker.sample.json) okur. Fiyatlar **gerçek veya güncel piyasa verisi değildir**. Beklenen sonuçta `mode: "simulated-fixture"`, `status: "ok"`, `ageMs: 30000` ve `spreadBps: 200` görünür. Bu abartılı spread yalnız hesabın kolay kontrol edilebilmesi içindir.
+
+## 2. İstersen canlı, salt okunur veriyi dene
+
+Önce [ATK hızlı başlangıçtaki](../atk/quickstart.md) CLI kurulumunu tamamla. Ardından:
+
+```bash
+node examples/market-quality/analyze.mjs --live
+```
+
+Bu seçenek `OKX_SITE=tr okx market ticker BTC-USDT --json` sorgusunu çalıştırır. Hesap bağlantısı veya API anahtarı gerektirmez. Yanıt gelmezse [sorun giderme](../atk/troubleshooting.md) sayfasına bak; fiyatı, zaman damgasını veya eksik alanı uydurma. **60 saniyelik eşik bu prototipin seçimi**, OKX hizmet garantisi değildir.
+
+## 3. Ekranı kur
+
+Üç kart yeterlidir: **kaynak** (enstrüman ve zaman), **hesaplama** (bid, ask, formül, spread) ve **veri kalitesi** (uyarı kodu ve açıklaması). Canlı mod ile temsili modu aynı rozetle gösterme. Mobilde kartları alt alta koy; uyarıyı yalnız renkle anlatma.
+
+## 4. İki başarısızlık durumunu göster
+
+- **Eski veri:** `ts` değerini eşikten geriye al. Sonuç `needs-review` olmalı; “anlık fiyat” yazmamalı.
+- **Ters veya eksik defter:** `bidPx > askPx` yap ya da alanı sil. Sonuç spread yerine `null` ve gerekçe göstermeli.
+
+## Tamamlanma ölçütü
+
+Kullanıcı hem temsili hem canlı modu ayırt edebiliyor; her rakamın kaynağı ve hesabı görünür; eski/eksik veride sistem sessizce normal sonuç vermiyor. Demo için emir veya hesap izni gerekmiyor.
+
+<PromptCopy src="/ai/prompts/atk-data-quality.txt" />
+
+**Kaynak kontrolü: 17 Ekim 2026.** [ATK `market` komutları](https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md) · [ATK bölge ve kurulum](https://github.com/okx/agent-trade-kit/blob/github-main/docs/configuration.md). Uygulama fikri ve eşikler topluluk önerisidir.

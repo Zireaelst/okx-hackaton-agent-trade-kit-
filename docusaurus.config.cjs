@@ -22,18 +22,19 @@ const config = {
       },
     ],
   ],
-  themes: [[require.resolve('@easyops-cn/docusaurus-search-local'), { hashed: true, language: ['en'], docsRouteBasePath: '/guide', indexBlog: false }]],
+  themes: [[require.resolve('@easyops-cn/docusaurus-search-local'), { hashed: true, language: ['tr', 'en'], docsRouteBasePath: '/guide', indexBlog: false }]],
   themeConfig: {
     image: 'img/social-card.svg',
     navbar: {
       title: 'OKX Hackathon Guide',
       hideOnScroll: false,
       items: [
+        { to: '/guide/start/intro', label: 'Buradan Başla', position: 'left', activeBasePath: '/guide/start' },
         { to: '/guide/atk/intro', label: 'Agent Trade Kit', position: 'left', activeBasePath: '/guide/atk' },
         { to: '/guide/onchainos/intro', label: 'OnchainOS', position: 'left', activeBasePath: '/guide/onchainos' },
         { to: '/guide/okx-ai/intro', label: 'OKX.ai', position: 'left', activeBasePath: '/guide/okx-ai' },
         { to: '/guide/ideas/intro', label: 'Hackathon Fikirleri', position: 'left', activeBasePath: '/guide/ideas' },
-        { to: '/guide/atk/demo', label: 'Rehberli Demo', position: 'right' },
+        { to: '/guide/build/atk-data-quality', label: 'Proje Reçeteleri', position: 'right', activeBasePath: '/guide/build' },
         { to: '/ai', label: 'AI için', position: 'right' },
         { href: 'https://github.com/Zireaelst/okx-hackaton-agent-trade-kit-', label: 'GitHub', position: 'right' },
       ],
@@ -42,6 +43,8 @@ const config = {
       style: 'dark',
       links: [
         { title: 'Rehberler', items: [
+          { label: 'Buradan başla', to: '/guide/start/intro' },
+          { label: 'Proje reçeteleri', to: '/guide/build/atk-data-quality' },
           { label: 'OKX TR Agent Trade Kit', to: '/guide/atk/intro' },
           { label: 'OnchainOS', to: '/guide/onchainos/intro' },
           { label: 'OKX.ai', to: '/guide/okx-ai/intro' },
