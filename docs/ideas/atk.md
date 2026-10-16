@@ -1,86 +1,32 @@
 ---
-title: ATK ile 12 fikir
-description: OKX TR Agent Trade Kit'in salt okunur piyasa araçlarıyla yapılabilecek hackathon projeleri.
+title: ATK ile 5 trade dışı fikir
+description: Agent Trade Kit verisini eğitim, kalite kontrolü ve hizmet prototiplerinde kullanma fikirleri.
 ---
 
-# ATK ile 12 fikir
+# ATK ile 5 trade dışı fikir
 
-Bu fikirler [ATK `market` araçları](https://github.com/okx/agent-trade-kit) ve [güncel CLI başvurusu](https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md) üzerine kurulur. **Hepsi salt okunur prototip olarak yapılabilir.** Kullanılabilir alt komut ve alanlar kurulu sürüme göre değişebilir; önce [ilk sorguyu](../atk/quickstart.md) çalıştır, sonra `okx market --help` çıktısını kontrol et. Türkiye uç noktası için rehberdeki `OKX_SITE=tr` ayarını kullan.
+ATK adında “Trade” geçse de hackathon prototipi emir vermek zorunda değildir. [Resmî depoda](https://github.com/okx/agent-trade-kit) anahtarsız `market`, haber ve salt okunur hesap sorguları gibi farklı araçlar bulunur. **ATK, OnchainOS ödeme veya OKX.ai marketplace modülü değildir.** Bu fikirlerde iki ürünü birleştirirsen ayrı entegrasyon ve izin sınırlarını açıkça göster.
 
-Her fikir için ekranda **enstrüman, veri zamanı, kullanılan araç ve hesaplama varsayımı** görünmeli. Piyasa verisi gözlemdir; tahmin, kâr garantisi veya kişisel yatırım tavsiyesi gibi sunulmamalıdır.
+## 1. Veri Kalitesi Panosu
 
-## 1. Market Risk Copilot
+**Kimin sorunu?** Piyasa verisini kullanan bir agent'ın eski veya eksik yanıtı fark etmesi. **MVP:** Ticker ve mum yanıtlarında kaynak zamanı, alınma zamanı, boş alan ve hata durumunu kontrol eden pano. **Demo:** Temsili gecikmiş/boş yanıtlarla uyarının değişmesi. **ATK dayanağı:** `market` verisi; anahtarsız başlanabilir. Bu bir alım satım sinyali değildir.
 
-**Soru:** “Şu anki piyasa görünümünü hangi sayılarla açıklayabilirim?”
+## 2. Kripto Veri Sözlüğü
 
-**MVP:** BTC-USDT ticker, ilk order book seviyeleri ve kapanmış mumlardan orta fiyat, spread (bps) ve mum fiyat aralığı hesapla. Eksik alanları ayrıca göster. **Demo:** [Rehberli temsili örneği](../atk/demo.mdx) kendi arayüzüne taşı. **Veri:** ticker, order book, candles.
+**Kimin sorunu?** Yeni başlayanların ticker, bid/ask ve mum alanlarını karıştırması. **MVP:** Gerçek veya temsili bir BTC-USDT yanıtındaki her alanı sade Türkçeyle açıklayan etkileşimli kartlar. **Demo:** Kullanıcı bir alanı seçince anlam, birim ve veri zamanı görünür. **ATK dayanağı:** ticker, order book, candles. [Mevcut rehberli demo](../atk/demo.mdx) örnek veri sağlar.
 
-## 2. Spread Radar
+## 3. Kaynaklı Haber Özeti
 
-**Soru:** “İzlediğim spot çiftlerde alış-satış farkı nasıl değişiyor?”
+**Kimin sorunu?** Birden çok haber başlığını kaynağı ve yayımlanma zamanı olmadan özetlemek. **MVP:** Kurulu sürümde erişilebiliyorsa ATK `news` modülündeki başlıkları konuya göre grupla; her iddiayı özgün habere bağla. **Demo:** Temsili üç haberle yinelenen başlıkları ayır. **Erişim:** `news` modülü ve bölge kullanılabilirliğini kurulu sürümde kontrol et; fiyat tahmini üretme.
 
-**MVP:** Kullanıcının seçtiği 3–5 çiftin en iyi bid/ask değerlerini ve spread'ini tek tabloda göster. Ölçüm saatini sakla; farklı zamanlı gözlemleri aynı an gibi karşılaştırma. **Demo:** İki ardışık okumanın farkını göster. **Veri:** ticker veya order book.
+## 4. API Yanıtı Doğrulama Servisi
 
-## 3. Derinlik Stres Testi
+**Kimin sorunu?** Başka uygulamaların bozuk veya belirsiz piyasa verisini fark etmeden kullanması. **MVP:** ATK'den alınmış bir *örnek yanıtı* şema, zaman ve eksik alan kurallarıyla doğrulayan küçük API. **Demo:** Hatalı üç yanıtı gerekçeli olarak reddet. **Genişletme:** İstersen bu servisi [OnchainOS 402 ödeme fikri](./onchainos.md#6-402-ödeme-laboratuvarı) için temsili ücretli kaynak yap; ödeme ATK özelliği gibi gösterilmez.
 
-**Soru:** “Varsayımsal bir büyüklük, görünen emir defterinde kaç seviyeye yayılır?”
+## 5. Hesap Ekstresi Açıklayıcısı
 
-**MVP:** Kullanıcının girdiği *varsayımsal* miktarı mevcut order book seviyeleri üzerinde hesapla; ağırlıklı ortalama fiyatı ve karşılanmayan miktarı yaz. **Demo:** “Bu bir anlık görüntü, gerçekleşecek işlem fiyatı değildir” uyarısıyla iki farklı miktarı karşılaştır. **Veri:** order book. Emir gönderme yok.
+**Kimin sorunu?** Kendi hesap hareketlerini anlamak isteyen kullanıcının işlem geçmişindeki alanları yorumlaması. **MVP:** Tamamen temsili, kişisel veri içermeyen hesap hareketlerini kategori ve tarih bazında açıklayan arayüz. **Demo:** Eksik işlem ve yinelenen kayıt uyarıları. **ATK dayanağı:** [Account modülünde](https://github.com/okx/agent-trade-kit/blob/github-main/docs/modules/account.md) bakiye ve bills sorguları var; **canlı hesap sorgusu okuma yetkili API erişimi ister**. Kullanıcıdan kimlik bilgisi sohbette istenmez.
 
-## 4. Mum Hikâyesi
+## Nasıl kurulur?
 
-**Soru:** “Son kapanmış mumlarda hangi gözlemlenebilir değişim var?”
-
-**MVP:** 1 saatlik kapanmış mumların yüksek/düşük aralığını, yönünü ve hacmini sade bir zaman çizelgesine çevir. Açık mumu ayır. **Demo:** Aynı aralıktaki en yüksek ve en düşük mumları gerekçesiyle işaretle. **Veri:** candles.
-
-## 5. Funding Watch
-
-**Soru:** “Takip ettiğim perpetual çiftlerin fonlama verisi nerede dikkat çekiyor?”
-
-**MVP:** Seçili swap enstrümanlarında funding rate, mark price ve ölçüm zamanını yan yana göster. Aykırı görünen değerleri yalnızca kullanıcı tanımlı eşikle işaretle. **Demo:** Eşik değişince açıklamanın nasıl değiştiğini göster. **Veri:** funding rate, mark price.
-
-## 6. Açık Pozisyon Nabzı
-
-**Soru:** “Açık pozisyon büyüklüğü fiyatla birlikte nasıl değişmiş?”
-
-**MVP:** Open interest ile fiyatın iki zamanlı değişimini birlikte göster. “Birlikte hareket” gözlemini “nedensellik” olarak anlatma. **Demo:** Artış, düşüş ve veri eksikliği için üç açıklama kartı. **Veri:** open interest/OI history ve ticker.
-
-## 7. Parite Farkı İzleyicisi
-
-**Soru:** “İki seçili enstrüman arasındaki fiyat farkı nasıl izlenir?”
-
-**MVP:** Kurulu sürümde varsa `pair-spread` çıktısını; yoksa iki ticker'ın karşılaştırılabilir fiyat alanlarını kullan. Çiftlerin para birimi ve ölçüm zamanını doğrula. **Demo:** Farkın formülünü ve kullanılan alanları ekranda göster. **Veri:** pair-spread veya ticker.
-
-## 8. Gösterge Karşılaştırma Laboratuvarı
-
-**Soru:** “İki farklı teknik gösterge aynı veri için ne söylüyor?”
-
-**MVP:** Kurulu ATK sürümündeki gösterge araçlarını kontrol edip iki göstergeyi kapanmış mumlarla birlikte görselleştir. Parametreleri ve veri penceresini açık yaz. **Demo:** Parametre değişince sonucun nasıl değiştiğini göster; al/sat kararı üretme. **Veri:** technical indicators, candles.
-
-## 9. Açıklanabilir Piyasa Tarayıcısı
-
-**Soru:** “Hangi enstrümanlar benim tanımladığım filtreyi geçti?”
-
-**MVP:** Kurulu sürümdeki market-filter araçlarını veya ticker listesini kullanarak hacim ve fiyat değişimi gibi açık eşikler uygula. Her sonucun yanında “neden listede” açıklaması olsun. **Demo:** Eşiği değiştirip sıralamanın güncellenmesini göster. **Veri:** tickers, market filter.
-
-## 10. Veri Tazeliği Nöbetçisi
-
-**Soru:** “Agent eski veya eksik veriyi nasıl fark eder?”
-
-**MVP:** Piyasa sorgularının kaynak zamanını, yerel alınma zamanını ve hata durumunu göster. Tanımlı eşik aşılırsa hesaplama sonucunu “güncelliği doğrulanamadı” diye işaretle. **Demo:** Temsili gecikme ve boş yanıt senaryoları. **Veri:** ticker, candles; amaç veri kalitesi.
-
-## 11. Piyasa Tekrar Anlatıcısı
-
-**Soru:** “Geçmiş bir zaman penceresini hangi kanıtlarla özetleyebilirim?”
-
-**MVP:** Geçmiş kapanmış mumları seçilen aralığa göre böl; yüksek/düşük, hacim ve belirgin değişimleri metinle anlat. Tarihsel order book varmış gibi davranma. **Demo:** Aynı veri için kısa ve ayrıntılı anlatım seçenekleri. **Veri:** historical candles.
-
-## 12. İşlem Öncesi Kontrol Listesi
-
-**Soru:** “Kullanıcının düşündüğü işlemden önce hangi piyasa koşulları görünür olmalı?”
-
-**MVP:** Kullanıcının *varsayımsal* yön ve miktarını al; spread, görünen derinlik, veri yaşı ve ölçüm eksiklerini raporla. **Demo:** “Devam et” düğmesi yerine yalnızca indirilebilir kontrol raporu üret. **Veri:** ticker, order book, candles. Hesap veya emir erişimi yok.
-
-## Uygulama sınırı
-
-İlk prototip için [CLI, MCP ve Skills farkı](../atk/cli-skills.md) ve [güvenli kullanım](../atk/safety.md) sayfalarına bak. Her fikrin canlı veriyle çalışması ağ ve bölge erişimine bağlıdır; yedek demo verisi **temsili** diye etiketlenmelidir. Yukarıdaki ürün yetenekleri [resmî ATK deposundan](https://github.com/okx/agent-trade-kit) kontrol edildi; bu 12 uygulama fikri topluluk önerisidir. **Kontrol tarihi: 16 Ekim 2026.**
+Anahtarsız ilk örnek için [ATK hızlı başlangıç](../atk/quickstart.md), MCP/CLI/Skills seçenekleri için [kurulum rehberi](../atk/cli-skills.md) ve erişim sınırları için [güvenlik](../atk/safety.md) sayfasına bak. Haber ve hesap araçları kurulu sürüm ve izinlere göre değişebilir; resmî [depo](https://github.com/okx/agent-trade-kit) ile [CLI başvurusunu](https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md) kontrol et. **Kaynak kontrolü: 16 Ekim 2026.**

@@ -1,30 +1,36 @@
 ---
-title: OKX.ai ile 3 fikir
-description: User, ASP ve Evaluator akışları üzerine kurulabilecek simülasyon odaklı hackathon projeleri.
+title: OKX.ai ile 6 fikir
+description: Agent hizmeti tasarlama, seçim, teslim ve değerlendirme için trade dışı hackathon fikirleri.
 ---
 
-# OKX.ai ile 3 fikir
+# OKX.ai ile 6 fikir
 
-[OKX.ai](https://web3.okx.com/onchainos/dev-docs/okxai/what-is-okxai) agent hizmetleri için **User**, **Agent Service Provider (ASP)** ve **Evaluator** rollerini tanımlar. Aşağıdaki fikirler gerçek marketplace görevleri değil, bu rollerin sorunlarını anlamak için hazırlanmış **topluluk prototipleridir**. Marketplace kaydı, ödeme, staking ve gerçek değerlendirme varsayılan demo kapsamı dışındadır.
+[OKX.ai](https://web3.okx.com/onchainos/dev-docs/okxai/what-is-okxai) User, Agent Service Provider (ASP) ve Evaluator rollerini tanımlar. Aşağıdaki fikirlerin tümü **temsili marketplace verisiyle** gösterilebilir. Gerçek kayıt, görev gönderimi, ödeme, abonelik veya değerlendirme yapılmaz.
 
-## 18. Hizmet Talebi Oluşturucu
+## 15. Hizmet Talebi Oluşturucu
 
-**Soru:** “User bir agent'a ölçülebilir ve güvenli görevi nasıl tarif eder?”
+**Kimin sorunu?** Kullanıcının agent'a belirsiz bir iş vermesi. **MVP:** Amaç, izin verilen girdiler, teslim biçimi, son tarih, bütçe üst sınırı ve kabul ölçütlerini içeren görev taslağı. **Demo:** “Belgeyi özetle” isteğini kaynaklı ve kontrol edilebilir bir brief'e dönüştür. **Dayanak:** [User görev akışı](https://web3.okx.com/onchainos/dev-docs/okxai/user-buy-service). Taslak gerçek göreve gönderilmez.
 
-**MVP:** Kullanıcının amacı, girdileri, teslim biçimi, kabul ölçütleri ve yetki sınırlarından yapılandırılmış bir görev taslağı oluştur. **Demo:** Belirsiz bir istekten “hangi veri ve hangi çıktı?” sorularını çıkar; örneğin salt okunur ATK piyasa özeti isteği. **Dayanak:** [User hizmet alma akışı](https://web3.okx.com/onchainos/dev-docs/okxai/user-buy-service). Taslak gerçek göreve gönderilmez.
+## 16. A2MCP Mikroservis Atölyesi
 
-## 19. ASP Teslim Kalitesi Kontrolü
+**Kimin sorunu?** Geliştiricinin küçük bir agent yeteneğini anlaşılır bir servis olarak sunamaması. **MVP:** “Parametre al → doğrulanabilir sonuç döndür” biçiminde belge çevirisi, veri doğrulama veya özetleme aracı tasarla; açık giriş/çıkış şeması göster. **Demo:** Ücretsiz ve temsili 402 ücretli sürümü karşılaştır. **Dayanak:** [A2MCP servis modeli](https://web3.okx.com/onchainos/dev-docs/okxai/howtomcp). Gerçek ASP kaydı veya ücretlendirme yok.
 
-**Soru:** “Bir agent hizmetinin teslimi, vaat ettiği biçim ve kanıta uyuyor mu?”
+## 17. Sağlayıcı Seçim Açıklayıcısı
 
-**MVP:** Örnek A2A raporu veya A2MCP yanıtını şema, zaman damgası, kaynak ve eksik veri ölçütlerine göre kontrol et. **Demo:** Hatalı ve doğru iki temsili teslimi yan yana göster. **Dayanak:** [ASP hizmet modelleri](https://web3.okx.com/onchainos/dev-docs/okxai/asp-introduction). Gerçek ASP kaydı veya servis yayını gerekmez.
+**Kimin sorunu?** User agent'ın bir hizmet sağlayıcısını neden seçtiğini anlayamaması. **MVP:** Temsili sağlayıcı kartlarını kapsam, teslim süresi, fiyat sınırı ve kanıtlanan yeteneklere göre karşılaştır; bilinmeyen alanları “bilinmiyor” göster. **Demo:** Ağırlıklar değişince seçimin gerekçesi değişsin. **Dayanak:** [User ve ASP rolleri](https://web3.okx.com/onchainos/dev-docs/okxai/what-is-okxai). Gerçek sıralama veya resmî puanlama sistemi iddiası yok.
 
-## 20. Evaluator Kanıt Panosu
+## 18. ASP Teslim Kalitesi Kontrolü
 
-**Soru:** “Bir görevin teslimini değerlendirirken hangi kanıtlara bakılmalı?”
+**Kimin sorunu?** Alınan hizmetin vaat edilen biçim ve kanıta uymaması. **MVP:** Örnek A2A raporu veya A2MCP yanıtını şema, kaynak, zaman ve eksik alan kurallarıyla denetle. **Demo:** Doğru ve hatalı iki temsili teslimi karşılaştır. **Dayanak:** [ASP hizmet modelleri](https://web3.okx.com/onchainos/dev-docs/okxai/asp-introduction). Gerçek anlaşmazlık kararı verilmez.
 
-**MVP:** Görev tanımı, beklenen ölçüt, teslim ve kaynak bağlantılarını tek panoda göster; “karşılandı / belirsiz / karşılanmadı” gerekçelerini kaydet. **Demo:** Tamamen temsili bir anlaşmazlığı iki değerlendirici görüşüyle incele. **Dayanak:** [Evaluator rolü](https://web3.okx.com/onchainos/dev-docs/okxai/evaluator-introduction). Gerçek karar, staking veya ödeme yapma.
+## 19. Evaluator Kanıt Panosu
 
-## ATK ile birleştirme
+**Kimin sorunu?** Görev tartışmasında isteğin, teslimin ve itirazın farklı yerlerde kalması. **MVP:** Brief, kabul ölçütü, teslim ve kaynakları tek ekranda topla; “karşılandı / belirsiz / karşılanmadı” gerekçelerini kaydet. **Demo:** Temsili bir teslim uyuşmazlığı. **Dayanak:** [Evaluator rolü](https://web3.okx.com/onchainos/dev-docs/okxai/evaluator-introduction). Gerçek değerlendirme veya staking yok.
 
-En kısa birleşik demo: [ATK Market Risk Copilot](./atk.md#1-market-risk-copilot) çıktısını **Hizmet Talebi Oluşturucu** için örnek teslim ölçütlerine bağla. Böylece gerçek marketplace işlemine girmeden “istek → veri → teslim → kontrol” akışını gösterebilirsin. Ürün rollerinin kaynağı [resmî OKX.ai dokümanı](https://web3.okx.com/onchainos/dev-docs/okxai/what-is-okxai); bu üç uygulama fikri topluluk önerisidir. **Kontrol tarihi: 16 Ekim 2026.**
+## 20. Çok Agentlı Görev Bütçesi
+
+**Kimin sorunu?** Bir işin çeviri, araştırma ve kalite kontrol gibi alt görevlere ayrılınca maliyetinin belirsizleşmesi. **MVP:** Temsili üç ASP görevi için üst bütçe, bağımlılık ve teslim ölçütleri tasarla; toplam sınır aşılırsa planı durdur. **Demo:** Bir sağlayıcı gecikince yeniden planlama. **Dayanak:** [A2A görev modeli](https://web3.okx.com/onchainos/dev-docs/okxai/a2a-no-subscription) ve [User akışı](https://web3.okx.com/onchainos/dev-docs/okxai/user-buy-service). Ürün içinde hazır çok agentlı orkestrasyon özelliği olduğu iddia edilmez.
+
+## Birleştirme örneği
+
+[ATK veri doğrulama servisini](./atk.md#4-api-yanıtı-doğrulama-servisi) A2MCP hizmet taslağına dönüştür; [402 ödeme laboratuvarında](./onchainos.md#6-402-ödeme-laboratuvarı) temsili ücretli çağrı göster. Böylece **veri → hizmet → ödeme onayı → teslim kontrolü** akışını para hareketi yapmadan sergilersin. Roller için [resmî OKX.ai dokümanı](https://web3.okx.com/onchainos/dev-docs/okxai/what-is-okxai) esas alındı; ürün fikirleri bize aittir. **Kaynak kontrolü: 16 Ekim 2026.**
