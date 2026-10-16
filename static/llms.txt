@@ -1,0 +1,26 @@
+# OKX Hackathon Community Guide
+
+> Independent Turkish-language hackathon guide focused on OKX TR Agent Trade Kit, with separate OnchainOS and OKX.ai guides. This is not official OKX documentation. Source review: 2026-10-16.
+
+Use read-only market data by default. Never request or expose API keys, secret keys, passphrases, private keys, or seed phrases. Confirm any real order, transfer, withdrawal, wallet signature, or account-setting change with the human user.
+
+## Agent Trade Kit
+
+- [Complete English agent context](https://okx-hackaton-agent-trade-kit.vercel.app/llms-full.txt): ATK installation, MCP/CLI/Skills, safety, and source links.
+- [ATK introduction](https://okx-hackaton-agent-trade-kit.vercel.app/guide/atk/intro): Human-readable Turkish guide.
+- [ATK quick start](https://okx-hackaton-agent-trade-kit.vercel.app/guide/atk/quickstart): Public market-data first query.
+- [ATK MCP setup](https://okx-hackaton-agent-trade-kit.vercel.app/guide/atk/mcp): Codex, Claude Code, and Cursor.
+- [Guided demo](https://okx-hackaton-agent-trade-kit.vercel.app/guide/atk/demo): Clearly labeled simulated data.
+
+## Other Product Guides
+
+- [OnchainOS guide](https://okx-hackaton-agent-trade-kit.vercel.app/guide/onchainos/intro): Separate onchain developer infrastructure.
+- [OKX.ai guide](https://okx-hackaton-agent-trade-kit.vercel.app/guide/okx-ai/intro): Separate agent marketplace.
+
+## Official Sources
+
+- [OKX TR Agent Trade Kit documentation](https://tr.okx.com/docs-v5/agent_en/#introduction)
+- [OKX Agent Trade Kit repository](https://github.com/okx/agent-trade-kit)
+- [OKX Agent Skills repository](https://github.com/okx/agent-skills)
+- [OnchainOS developer documentation](https://web3.okx.com/onchainos/dev-docs/home/what-is-onchainos)
+- [OKX.ai developer documentation](https://web3.okx.com/onchainos/dev-docs/okxai/what-is-okxai)

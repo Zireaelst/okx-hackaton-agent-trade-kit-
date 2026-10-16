@@ -1,0 +1,29 @@
+---
+title: Rehberli demo
+description: Market Risk Copilot temsili veriyle nasıl çalışır?
+---
+
+import MarketDemo from '@site/src/components/MarketDemo';
+
+# Rehberli demo: Market Risk Copilot
+
+Bu örnek **canlı OKX verisi çekmez**; fiyatlar ve mumlar hesaplamayı göstermek için hazırlanmış temsili veridir. Hesap bağlama, API anahtarı veya emir oluşturma adımı yoktur.
+
+<MarketDemo />
+
+## Hesaplama nasıl yapılır?
+
+**Orta fiyat:** `(bid + ask) / 2`  
+**Spread (bps):** `(ask − bid) / orta fiyat × 10.000`  
+**Fiyat aralığı:** tamamlanmış mumların en düşük `low` ve en yüksek `high` değerleri.
+
+Görseldeki örnekte bid 99.900 ve ask 100.100 USDT olduğundan orta fiyat 100.000 USDT, spread 20 bps olur. Son sıradaki açık mum özellikle hesaplamaya katılmaz.
+
+## Bunu gerçek projeye dönüştür
+
+1. [MCP bağlantısını](./mcp.md) yalnız `market` modülüyle kur.
+2. Agent'a ticker, order book ve tamamlanmış mum verilerini ayrı ayrı sorgulat.
+3. Hesabı kendi kodunda yeniden yap ve sonuçları ham alanlarla karşılaştır.
+4. Sonuçta verinin zamanını, enstrümanı ve kullanılan araçları göster.
+
+**Kaynak kontrolü:** 16 Ekim 2026 · [ATK market araçları](https://tr.okx.com/docs-v5/agent_en/#mcp). Sayısal örnek bu topluluk rehberi için üretilmiştir.

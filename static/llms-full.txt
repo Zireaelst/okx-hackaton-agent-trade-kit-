@@ -1,0 +1,108 @@
+# OKX Hackathon Community Guide — Agent Context
+
+Last source review: 2026-10-16. This is an independent community guide, not an official OKX publication. The official links below are authoritative when product behavior or commands change.
+
+## Product boundaries
+
+OKX TR Agent Trade Kit (ATK) connects OKX exchange capabilities to a local MCP server and CLI. Agent Skills teach coding agents how to invoke the CLI. OnchainOS is a separate onchain developer stack. OKX.ai is a separate agent marketplace built on OnchainOS capabilities. Do not describe the latter two as ATK modules.
+
+## ATK: read-only first
+
+Official sources: https://github.com/okx/agent-trade-kit and https://tr.okx.com/docs-v5/agent_en/#introduction
+
+ATK market data includes ticker, order book, candles, recent trades, and some derivatives metrics. The installed package version determines the exact available tools. Do not rely on a hard-coded total tool count: official pages can lag behind the repository.
+
+Prerequisite: Node.js 18 or newer, according to the ATK repository.
+
+Install:
+
+```bash
+npm install -g @okx_ai/okx-trade-mcp @okx_ai/okx-trade-cli
+```
+
+Use the TR site explicitly: the CLI and MCP otherwise default to global. `OKX_SITE=tr` was verified against a public BTC-USDT ticker request. First public query, no API key required:
+
+```bash
+OKX_SITE=tr okx market ticker BTC-USDT
+```
+
+Start a local MCP server with public market data only:
+
+```bash
+okx-trade-mcp --site tr --modules market
+```
+
+Codex CLI registration:
+
+```bash
+codex mcp add okx-tr-market -- okx-trade-mcp --site tr --modules market
+codex mcp list
+```
+
+Claude Code direct registration:
+
+```bash
+claude mcp add --transport stdio okx-tr-market -- okx-trade-mcp --site tr --modules market
+```
+
+Cursor MCP configuration (merge this server into any existing mcpServers object):
+
+```json
+{"mcpServers":{"okx-tr-market":{"command":"okx-trade-mcp","args":["--site","tr","--modules","market"]}}}
+```
+
+The 1.4.8 ATK `setup` helper does not accept a `--site` flag. Direct registration is needed to select the TR endpoint explicitly.
+
+Source for ATK setup and flags: https://github.com/okx/agent-trade-kit/blob/github-main/docs/configuration.md
+Source for Codex MCP command shape: https://developers.openai.com/learn/docs-mcp
+
+ATK CLI examples:
+
+```bash
+OKX_SITE=tr okx market ticker BTC-USDT
+OKX_SITE=tr okx market candles BTC-USDT --bar 1H --limit 10
+OKX_SITE=tr okx market funding-rate BTC-USDT-SWAP
+```
+
+CLI subcommands are separated by spaces. MCP tool identifiers use another naming form; do not invent CLI commands by transforming MCP names. Current CLI reference: https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md
+
+Install official Agent Skills:
+
+```bash
+npx skills add okx/agent-skills
+```
+
+The skills require the `okx` CLI. Official skill list: https://github.com/okx/agent-skills
+
+## Market Risk Copilot example
+
+Request BTC-USDT ticker, first five order-book levels, and the last six completed 1-hour candles. Calculate midpoint = (best_bid + best_ask) / 2, spread_bps = (best_ask - best_bid) / midpoint * 10000, and the range from the lowest low to highest high of completed candles. Include instrument, source tools, and timestamps. Never fabricate missing values. The site's interactive example uses simulated numbers; it is not a live feed.
+
+## Safety
+
+Public market data needs no API key. Account queries require authorized read access. Trading and account changes require suitable permissions and product availability. Keep credentials in local configuration, never in chat, source control, a browser page, or a public demo. Default to read-only modules. Before any real order, transfer, withdrawal, wallet signature, or account-setting change, show parameters and impact and obtain explicit human confirmation. Demo mode is for simulation, but not every product or endpoint is available there. Regional and account restrictions still apply. Official safety source: https://tr.okx.com/docs-v5/agent_en/#safety
+
+## OnchainOS
+
+Official overview: https://web3.okx.com/onchainos/dev-docs/home/what-is-onchainos
+Official agent wallet quickstart: https://web3.okx.com/onchainos/dev-docs/home/install-your-agentic-wallet
+
+OnchainOS covers Agentic Wallet, onchain market data, DEX trading, and agent payments. The documented installer is:
+
+```bash
+npx -y @okxweb3/onchainos-installer install
+```
+
+Begin with a read-only market lookup. Wallet creation, transaction signatures, swaps, and payments are separate actions requiring their own review and appropriate user approval. Never request seed phrases or private keys in chat.
+
+## OKX.ai
+
+Official overview: https://web3.okx.com/onchainos/dev-docs/okxai/what-is-okxai
+User registration guide: https://web3.okx.com/onchainos/dev-docs/okxai/user-register
+ASP overview: https://web3.okx.com/onchainos/dev-docs/okxai/asp
+
+OKX.ai is an agent marketplace with User, Agent Service Provider (ASP), and Evaluator roles. ASPs can provide repeatable A2MCP services or negotiated A2A tasks. Registration, paid tasks, escrow, evaluation, and staking are real external actions. The community guide explains their flow but does not perform them.
+
+## Suggested starter task
+
+"Use OKX TR Agent Trade Kit's public market tools to inspect BTC-USDT. Retrieve ticker, the first five order-book levels, and the last six completed 1-hour candles. Calculate bid/ask spread in basis points and the completed-candle price range. Cite the tools and data timestamps. Do not place orders, access my account, invent missing data, or ask for credentials."
