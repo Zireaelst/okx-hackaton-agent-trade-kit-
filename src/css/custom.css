@@ -8,31 +8,49 @@
   --ifm-code-font-size: 94%;
   --ifm-navbar-height: 4.4rem;
   --ifm-global-radius: 12px;
+  --guide-hero-bg: radial-gradient(circle at 85% 20%, #d3f5e1 0, transparent 34%), linear-gradient(135deg, #f4f8f5, #e8f3ec);
+  --guide-card-bg: #fff;
+  --guide-card-border: #dce9e1;
+  --guide-muted: #426056;
+  --guide-note: #5b6c62;
+  --guide-accent: #0c7b60;
+  --guide-step-bg: #d9f7e9;
+  --guide-step-text: #0a624d;
+  --guide-card-shadow: #19382d16;
 }
 
 [data-theme='dark'] {
   --ifm-color-primary: #64dfb5;
   --ifm-background-color: #0e1515;
   --ifm-background-surface-color: #152020;
+  --guide-hero-bg: radial-gradient(circle at 85% 20%, #1a453b 0, transparent 38%), linear-gradient(135deg, #101c1b, #172c27);
+  --guide-card-bg: #192725;
+  --guide-card-border: #34524a;
+  --guide-muted: #bdd2ca;
+  --guide-note: #aec9bd;
+  --guide-accent: #79e8be;
+  --guide-step-bg: #244d40;
+  --guide-step-text: #b8f4d8;
+  --guide-card-shadow: #0006;
 }
 
 .navbar { box-shadow: 0 1px 0 rgba(20, 40, 34, .09); }
 .navbar__title { font-weight: 750; letter-spacing: -.03em; }
-.heroGuide { padding: 5rem 0 4rem; background: radial-gradient(circle at 85% 20%, #d3f5e1 0, transparent 34%), linear-gradient(135deg, #f4f8f5, #e8f3ec); }
+.heroGuide { padding: 5rem 0 4rem; background: var(--guide-hero-bg); }
 .heroGuide h1 { max-width: 800px; font-size: clamp(2.4rem, 5vw, 4.5rem); letter-spacing: -.055em; line-height: 1.06; }
-.heroGuide p { max-width: 690px; font-size: 1.18rem; color: #426056; }
-.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 800; color: #0d8066; }
+.heroGuide p { max-width: 690px; font-size: 1.18rem; color: var(--guide-muted); }
+.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 800; color: var(--guide-accent); }
 .guideGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0 4rem; }
-.guideCard { display: block; padding: 1.6rem; border: 1px solid #dce9e1; border-radius: 18px; background: white; color: inherit; text-decoration: none; transition: transform .15s, box-shadow .15s; }
-.guideCard:hover { transform: translateY(-3px); box-shadow: 0 12px 30px #19382d16; text-decoration: none; }
+.guideCard { display: block; padding: 1.6rem; border: 1px solid var(--guide-card-border); border-radius: 18px; background: var(--guide-card-bg); color: var(--ifm-font-color-base); text-decoration: none; transition: transform .15s, box-shadow .15s; }
+.guideCard:hover { transform: translateY(-3px); box-shadow: 0 12px 30px var(--guide-card-shadow); color: var(--ifm-font-color-base); text-decoration: none; }
 .guideCard h3 { margin-bottom: .4rem; }
-.guideCard p { color: #53675e; margin-bottom: 0; }
-.guideCard .tag { color: #0c7b60; font-size: .76rem; font-weight: 750; text-transform: uppercase; }
-.noteStrip { border-top: 1px solid #dce9e1; padding: 2rem 0; color: #5b6c62; font-size: .9rem; }
+.guideCard p { color: var(--guide-muted); margin-bottom: 0; }
+.guideCard .tag { color: var(--guide-accent); font-size: .76rem; font-weight: 750; text-transform: uppercase; }
+.noteStrip { border-top: 1px solid var(--guide-card-border); padding: 2rem 0; color: var(--guide-note); font-size: .9rem; }
 .aiBox { padding: 1.5rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 14px; background: var(--ifm-background-surface-color); }
 .demoShell { border: 1px solid var(--ifm-color-emphasis-300); border-radius: 18px; padding: 1.5rem; background: var(--ifm-background-surface-color); }
 .demoStep { display: flex; gap: .75rem; margin: 1rem 0; align-items: flex-start; }
-.demoNum { display: inline-grid; place-items: center; min-width: 2rem; height: 2rem; border-radius: 50%; background: #d9f7e9; color: #0a624d; font-weight: 800; }
+.demoNum { display: inline-grid; place-items: center; min-width: 2rem; height: 2rem; border-radius: 50%; background: var(--guide-step-bg); color: var(--guide-step-text); font-weight: 800; }
 .demoStats { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; margin: 1.4rem 0; }
 .demoStat { padding: 1rem; border-radius: 12px; background: var(--ifm-color-emphasis-100); }
 .demoStat strong { display: block; font-size: 1.3rem; }
