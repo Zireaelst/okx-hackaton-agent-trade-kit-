@@ -1,11 +1,12 @@
 # OKX Hackathon Community Guide
 
-> Independent Turkish-language hackathon guide focused on OKX TR Agent Trade Kit, with separate OnchainOS and OKX.ai guides. This is not official OKX documentation. Source review: 2026-10-16.
+> Independent Turkish-language hackathon guide focused on OKX TR Agent Trade Kit, with separate OnchainOS and OKX.ai guides. This is not official OKX documentation. Source review: 2026-10-17.
 
 Use read-only market data by default. Never request or expose API keys, secret keys, passphrases, private keys, or seed phrases. Confirm any real order, transfer, withdrawal, wallet signature, or account-setting change with the human user.
 
 ## Agent Trade Kit
 
+- [Choose a starting path](https://okx-tr-atk-hackathon-guide.vercel.app/guide/start/intro): Goal, client, and access-aware Turkish guide.
 - [Complete English agent context](https://okx-tr-atk-hackathon-guide.vercel.app/llms-full.txt): ATK installation, MCP/CLI/Skills, safety, and source links.
 - [ATK introduction](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/intro): Human-readable Turkish guide.
 - [ATK quick start](https://okx-tr-atk-hackathon-guide.vercel.app/guide/atk/quickstart): Public market-data first query.
@@ -22,6 +23,10 @@ Use read-only market data by default. Never request or expose API keys, secret k
 
 ## Hackathon Project Ideas
 
+- [ATK data-quality recipe](https://okx-tr-atk-hackathon-guide.vercel.app/guide/build/atk-data-quality): Runnable fixture and optional public read-only market query.
+- [ATK service recipe](https://okx-tr-atk-hackathon-guide.vercel.app/guide/build/atk-a2mcp): Local JSON HTTP prototype; not an A2MCP registration.
+- [HTTP 402 lab](https://okx-tr-atk-hackathon-guide.vercel.app/guide/build/payment-402): Simulated payment experience; no wallet or settlement.
+- [Project-specific agent prompts](https://okx-tr-atk-hackathon-guide.vercel.app/ai): Copyable English prompts for each recipe.
 - [31 project ideas](https://okx-tr-atk-hackathon-guide.vercel.app/guide/ideas/intro): Mostly non-trading community MVPs, not official OKX products or contest categories.
 - [16 ATK ideas](https://okx-tr-atk-hackathon-guide.vercel.app/guide/ideas/atk): Feasibility matrix for public market data, access-dependent news, read-only account data, local audit logs, and a cross-product service idea.
 - [9 OnchainOS ideas](https://okx-tr-atk-hackathon-guide.vercel.app/guide/ideas/onchainos): Agentic payments, HTTP 402, billing, subscriptions, and wallet approval prototypes.

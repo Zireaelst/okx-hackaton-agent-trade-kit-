@@ -15,10 +15,12 @@ Bu seçkideki **31 fikir**, geliştirilebilecek topluluk prototipleridir; hazır
 
 ## Öne çıkan dört trade dışı başlangıç
 
-1. **[ATK Veri Kalitesi Panosu](./atk.md#1-veri-kalitesi-panosu):** Anahtarsız veriyi sorgula; eski veya eksik yanıtı görünür kıl.
-2. **[ATK verisinden agent hizmeti](./atk.md#16-atk-verisini-ücretli-servise-dönüştürme):** Veri kaynağını, servis katmanını ve temsili ödeme adımını ayrı göster.
-3. **[402 Ödeme Laboratuvarı](./onchainos.md#17-402-ödeme-laboratuvarı):** Ücretli bir API isteğinin “erişim isteği → ödeme talebi → onay → sonuç” yolculuğunu yerel olarak canlandır.
-4. **[Hizmet Talebi Oluşturucu](./okx-ai.md#26-hizmet-talebi-oluşturucu):** Belirsiz bir isteği teslim biçimi, kabul ölçütü ve bütçe sınırı açık bir agent görevine dönüştür.
+1. **[ATK Veri Kalitesi Panosu](../build/atk-data-quality.mdx):** <span className="feasibilityBadge">Anahtarsız · çalışan örnek</span> Anahtarsız veriyi sorgula; eski veya eksik yanıtı görünür kıl.
+2. **[ATK verisinden agent hizmeti](../build/atk-a2mcp.mdx):** <span className="feasibilityBadge">ATK · yerel prototip</span> Veri kaynağını ve servis katmanını ayrı göster. A2MCP kaydı ayrı iştir.
+3. **[402 Ödeme Laboratuvarı](../build/payment-402.mdx):** <span className="feasibilityBadge feasibilityBadge--warn">Tamamen temsili</span> 402 yanıtı, yerel onay, ret ve süre dolumunu canlandır.
+4. **[Hizmet Talebi Oluşturucu](./okx-ai.md#26-hizmet-talebi-oluşturucu):** <span className="feasibilityBadge feasibilityBadge--warn">Marketplace simülasyonu</span> İsteği teslim biçimi ve kabul ölçütü açık bir agent görevine dönüştür.
+
+**Rozet anahtarı:** “Anahtarsız” ATK'nin public market verisiyle başlar; “yerel prototip” gerçek A2MCP hizmeti değildir; “temsili” ve “simülasyon” gerçek ödeme veya marketplace işlemi yapmaz. Üç [adım adım proje reçetesine](../build/atk-data-quality.mdx) geçebilir veya [sana uygun yolu](../start/intro.mdx) seçebilirsin.
 
 ## Bir fikri hafta sonu demosuna dönüştür
 
