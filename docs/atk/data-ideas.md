@@ -19,6 +19,8 @@ ATK'nin `market` modülü, bir prototip için anahtarsız başlangıç noktasıd
 
 Daha geniş bir liste için [20 projelik Hackathon Fikirleri rehberine](../ideas/intro.md) bak.
 
+**Trade dışı bir proje arıyorsan:** [agent ödemeleri ve hizmetleri fikirleri](../ideas/intro.md) bölümünden başla. Bu sayfadaki üç örnek yalnız ATK piyasa verisiyle başlangıç seçenekleridir.
+
 ### Market Risk Copilot
 
 Ticker, ilk order book seviyeleri ve tamamlanmış mumları okuyup spread, fiyat aralığı ve gözlemleri kısa bir rapora dönüştürür. [Rehberli demo](./demo.mdx) bunun temsili sürümüdür.
