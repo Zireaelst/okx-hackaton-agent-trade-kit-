@@ -31,9 +31,9 @@ export default function ClientStrip() {
   return <section className="clientSection" aria-labelledby="clientSectionTitle">
     <div className="container">
       <img className="clientProductLogo" src={atkLogo} alt="Agent Trade Kit" />
-      <p className="clientEyebrow">MCP ve Skills istemcileri</p>
-      <h2 id="clientSectionTitle">Kullandığın agent ortamıyla devam et.</h2>
-      <p className="clientIntro">ATK yerel bir MCP sunucusu ve CLI sunar. İstemcine uygun kurulum yolunu seç veya salt okunur OKX TR MCP kaydını kopyala.</p>
+      <p className="clientEyebrow">İstemci kurulumu</p>
+      <h2 id="clientSectionTitle">Kullandığın araçla ATK'yi kur.</h2>
+      <p className="clientIntro">ATK'nin MCP sunucusu ve CLI aracı var. Kullandığın istemcinin kurulum rehberini aç veya yalnızca piyasa verisi okuyan MCP kaydını kopyala.</p>
       <div className="clientStrip">
         {clients.map((client) => <div key={client.id} className="clientCard">
           <Link className="clientBrand" to={client.route} aria-label={`${client.name}: ${client.mode}`}>

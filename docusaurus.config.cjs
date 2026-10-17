@@ -1,6 +1,6 @@
 const config = {
   title: 'OKX Hackathon Rehberi',
-  tagline: 'Agent araçlarıyla keşfet, öğren, üret.',
+  tagline: 'OKX TR Agent Trade Kit için hackathon rehberi.',
   favicon: 'img/favicon.svg',
   url: 'https://agentic-hackathon-tr.vercel.app',
   baseUrl: '/',
@@ -35,8 +35,8 @@ const config = {
         { to: '/guide/onchainos/intro', label: 'OnchainOS', position: 'left', activeBasePath: '/guide/onchainos' },
         { to: '/guide/okx-ai/intro', label: 'OKX.ai', position: 'left', activeBasePath: '/guide/okx-ai' },
         { to: '/guide/ideas/intro#fikir-kesfet', label: 'Fikirler', position: 'left', activeBasePath: '/guide/ideas', className: 'navbar__item--compact' },
-        { to: '/guide/build/atk-data-quality', label: 'Reçeteler', position: 'right', activeBasePath: '/guide/build', className: 'navbar__item--optional' },
-        { to: '/ai', label: 'AI için', position: 'right', className: 'navbar__item--optional' },
+        { to: '/guide/build/atk-data-quality', label: 'Örnek projeler', position: 'right', activeBasePath: '/guide/build', className: 'navbar__item--optional' },
+        { to: '/ai', label: 'LLM dosyaları', position: 'right', className: 'navbar__item--optional' },
         { href: 'https://go.team1.network/turkiye-builder', label: "Builder Hub'a kaydol ↗", position: 'right', className: 'navbar__link--builder' },
       ],
     },
@@ -46,7 +46,7 @@ const config = {
         { title: 'Rehberler', items: [
           { label: 'Buradan başla', to: '/guide/start/intro' },
           { label: 'Jüriye hazırlık', to: '/guide/start/judging' },
-          { label: 'Proje reçeteleri', to: '/guide/build/atk-data-quality' },
+          { label: 'Örnek projeler', to: '/guide/build/atk-data-quality' },
           { label: 'OKX TR Agent Trade Kit', to: '/guide/atk/intro' },
           { label: 'OnchainOS', to: '/guide/onchainos/intro' },
           { label: 'OKX.ai', to: '/guide/okx-ai/intro' },

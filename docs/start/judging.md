@@ -9,7 +9,7 @@ Avalanche araçlarıyla geliştirmeye başlamak için **[Team1 yönlendirmesiyle
 
 ## Paylaşılan değerlendirme taslağı
 
-Aşağıdaki ağırlıklar bu rehberle paylaşılan jüri çalışma dosyasından alınmıştır. Dosya bunları **öneri başlangıç noktası** olarak tanımlar; resmî sponsor veya organizatör puan cetveli olduğu doğrulanmadı. Nihai kurallar değişirse organizatörün güncel duyurusu esas alınır.
+Aşağıdaki ağırlıklar bu rehberle paylaşılan jüri çalışma dosyasından alınmıştır. Dosyada bunlar **önerilen ölçütler** olarak geçer; organizatörün resmî puan cetveli oldukları doğrulanmadı. Güncel kurallar için organizatörün duyurusunu kontrol et.
 
 | Başlık | Ağırlık | Jüriye gösterilecek somut kanıt |
 | --- | ---: | --- |
@@ -22,14 +22,14 @@ Aşağıdaki ağırlıklar bu rehberle paylaşılan jüri çalışma dosyasında
 
 **Taslak uygunluk kontrolü:** Paylaşılan dosya sıralamadan önce herkese açık repo, çalışan demo, Avalanche dağıtımı ve en az bir OKX aracının kullanılmasını kontrol etmeyi öneriyor. Eşitlikte Agentic Design puanını öne çıkarıyor. Bunları kesin etkinlik koşulu veya ödül garantisi olarak sunma. Dosyadaki “her başlığın dört alt ölçütünün ortalaması” notu, bazı başlıklarda iki ya da üç alt ölçüt bulunmasıyla uyuşmuyor; bu rehber hesaplama formülü üretmiyor.
 
-## En kısa kanıt paketi
+## Sunumda göstereceklerin
 
 1. **Repo ve kurulum:** Herkese açık depo, tekrar edilebilir çalıştırma adımları, örnek veri ile canlı veri arasındaki ayrım.
-2. **Agent izi:** Kullanıcı hedefi → plan → doğru OKX aracı → gözlem → karar → sonuç akışını tek oturumda göster. Başarısız araç çağrısında ne olduğunu da belirt.
+2. **Agent'ın işlem kaydı:** Kullanıcı hedefi → plan → OKX aracı → gözlem → karar → sonuç akışını tek oturumda göster. Araç çağrısı başarısız olursa ne olduğunu da belirt.
 3. **OKX kanıtı:** Örneğin ATK'nin salt okunur `market` sorgusunun komutunu, yanıt zamanını ve kullanılan alanlarını göster. OKX.ai kaydı veya OnchainOS ödemesi yapılmadıysa yapılmış gibi anlatma.
-4. **Avalanche kanıtı:** Gerçekten C-Chain/Fuji veya bir Avalanche L1'e dağıtılan bileşenin ağını, kontrat adresini ve explorer/işlem bağlantısını ekle. Yalnızca Builder Hub hesabı veya statik bir Vercel sayfası zincir dağıtımı değildir.
+4. **Avalanche kanıtı:** Gerçekten C-Chain/Fuji veya bir Avalanche L1'e dağıtılan bileşenin ağını, kontrat adresini ve blok gezgini veya işlem bağlantısını ekle. Yalnızca Builder Hub hesabı veya statik bir Vercel sayfası zincir dağıtımı değildir.
 5. **Ürün değeri:** Hedef kullanıcının sorunu, neden şimdi önemli olduğu, çözümün neden agent gerektirdiği ve ilk kullanıcıya ulaşma yolu.
-6. **Canlı demo:** İki dakikalık mutlu yol, bir hata/izin durumu, veri kaynağı ve güvenlik sınırı; ağ veya hesap erişimi kesilirse açıkça etiketlenmiş yedek kayıt.
+6. **Canlı demo:** Başarılı senaryoyu iki dakikada göster. Bir hata veya izin durumunu, veri kaynağını ve güvenlik sınırını da açıkla. Ağ ya da hesap erişimi kesilirse önceden hazırlanmış kaydı açıkça etiketle.
 
 ATK piyasa verisi ile Avalanche dağıtımı **ayrı entegrasyonlardır**. Zincir bileşenine gerçek ihtiyaç yoksa sırf ölçütü doldurmak için sahte kontrat ekleme. Ödeme, takas veya cüzdan imzası içeren demoda işlem parametrelerini ve maliyeti kullanıcıya göster; açık onay olmadan gerçek işlem başlatma. Kimlik bilgilerini repoya, siteye veya sohbet mesajına koyma.
 

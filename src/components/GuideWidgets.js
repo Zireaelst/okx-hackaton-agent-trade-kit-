@@ -10,7 +10,7 @@ export function PathFinder() {
 
   return <div className="pathFinder">
     <div className="pathFinderFields">
-      <label>Ne üretmek istiyorsun?
+      <label>Nasıl bir proje yapmak istiyorsun?
         <select value={goal} onChange={(event) => setGoal(event.target.value)}>
           <option value="atk">ATK ile veri aracı</option>
           <option value="service">ATK verisinden agent hizmeti</option>
@@ -37,14 +37,14 @@ export function PathFinder() {
       <h3>{path.title}</h3>
       <p>{path.note}</p>
       <div className="button-group">
-        <Link className="button button--primary" to={path.recipeUrl}>Proje reçetesini aç</Link>
-        <Link className="button button--secondary" to={path.setupUrl}>Kurulum yolunu gör</Link>
+        <Link className="button button--primary" to={path.recipeUrl}>Örnek projeyi aç</Link>
+        <Link className="button button--secondary" to={path.setupUrl}>Kurulum rehberini aç</Link>
       </div>
     </div>
   </div>;
 }
 
-export function PromptCopy({ src, label = 'AI prompt’unu kopyala' }) {
+export function PromptCopy({ src, label = 'Talimatı kopyala' }) {
   const [message, setMessage] = useState('');
   async function copy() {
     try {
@@ -58,7 +58,7 @@ export function PromptCopy({ src, label = 'AI prompt’unu kopyala' }) {
   }
 
   return <div className="promptBox">
-    <div><strong>Bu projeye özel AI başlangıcı</strong><p>Görev, veri sınırı ve başarı ölçütleri hazır.</p></div>
+    <div><strong>Codex ve Claude Code için</strong><p>Bu projeye uygun görev ve kontrol adımlarını kopyala.</p></div>
     <div className="button-group">
       <button type="button" className="button button--primary" onClick={copy}>{label}</button>
       <a className="button button--secondary" href={src} download>TXT indir</a>
@@ -68,10 +68,10 @@ export function PromptCopy({ src, label = 'AI prompt’unu kopyala' }) {
 }
 
 const paymentStates = {
-  idle: { title: 'İstek bekliyor', detail: 'Örnek agent ücretli /summary kaynağını isteyecek.' },
+  idle: { title: 'İstek bekliyor', detail: 'Örnek agent ücretli /summary adresine istek gönderecek.' },
   challenge: { title: '402 Payment Required', detail: 'Örnek sunucu 0,02 USDT tutarlı temsili ödeme talebi döndürdü.' },
   approved: { title: 'Onay kaydedildi', detail: 'Bu yalnızca yerel demo onayıdır. İmza ve para hareketi yapılmadı.' },
-  completed: { title: 'Örnek içerik açıldı', detail: 'Erişim sonucu temsili olarak gösterildi. Gerçek settlement yapılmadı.' },
+  completed: { title: 'Örnek içerik açıldı', detail: 'Erişim sonucu temsili olarak gösterildi. Gerçek ödeme yapılmadı.' },
   declined: { title: 'Kullanıcı reddetti', detail: 'İçerik kapalı kaldı; hiçbir ödeme denenmedi.' },
   expired: { title: 'Talep süresi doldu', detail: 'Yeni bir talep olmadan bu ödeme isteği kullanılamaz.' },
 };

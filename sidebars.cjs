@@ -3,7 +3,7 @@ module.exports = {
     { type: 'category', label: 'Buradan başla', items: ['start/intro', 'start/judging'] },
   ],
   build: [
-    { type: 'category', label: 'Proje reçeteleri', items: [
+    { type: 'category', label: 'Örnek projeler', items: [
       'build/atk-data-quality', 'build/atk-a2mcp', 'build/payment-402',
     ] },
   ],
