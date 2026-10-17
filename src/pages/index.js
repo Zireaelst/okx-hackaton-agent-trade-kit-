@@ -23,7 +23,7 @@ export default function Home() {
               <Link className="button button--primary button--lg" to="/guide/start/intro">Rehbere başla <span aria-hidden="true">→</span></Link>
               <Link className="button button--outline button--secondary button--lg" to="/guide/ideas/intro#fikir-kesfet">{ideas.length} proje fikri</Link>
             </div>
-            <p className="heroBuilderLink">Avalanche için: <a href="https://go.team1.network/turkiye-builder" target="_blank" rel="noopener noreferrer">Team1 bağlantısıyla Builder Hub'a kaydol ↗</a> · <Link to="/guide/start/judging">Jüri ölçütleri</Link></p>
+            <p className="heroBuilderLink">Avalanche için: <a href="https://go.team1.network/turkiye-builder" target="_blank" rel="noopener noreferrer">Team1 bağlantısıyla Builder Hub'a kaydol ↗</a> · <Link to="/guide/avalanche/judging">Jüri ölçütleri</Link></p>
           </div>
           <aside className="heroJourney" aria-label="Demoya giden üç adım">
             <div className="heroJourneyHeader">İlk üç adım</div>
@@ -39,7 +39,7 @@ export default function Home() {
       <section className="container builderSection" aria-labelledby="builder-title">
         <div className="builderPanel">
           <div><span className="eyebrow">Avalanche Builder Hub</span><h2 id="builder-title">Avalanche ile geliştirecek misin?</h2><p>Team1 bağlantısıyla Builder Hub'a kaydol. Jüriye sunacağın Avalanche dağıtımını ve OKX kullanımını ayrıca belgelemeyi unutma.</p><small>Builder Hub hesabı, hackathon kaydı veya zincir dağıtımı değildir.</small></div>
-          <div className="builderActions"><a className="button button--primary" href="https://go.team1.network/turkiye-builder" target="_blank" rel="noopener noreferrer">Builder Hub'a kaydol ↗</a><Link className="button button--outline button--secondary" to="/guide/start/judging">Jüri rehberini aç</Link></div>
+          <div className="builderActions"><a className="button button--primary" href="https://go.team1.network/turkiye-builder" target="_blank" rel="noopener noreferrer">Builder Hub'a kaydol ↗</a><Link className="button button--outline button--secondary" to="/guide/avalanche/intro">Avalanche rehberi</Link></div>
         </div>
       </section>
       <section className="container guideSection"><div className="guideSectionHeading"><div><span className="eyebrow">Ürün rehberleri</span><h2>Ne kullanacaksın?</h2><p>ATK, OnchainOS ve OKX.ai için kurulum ve örnek akışlar.</p></div><Link to="/guide/ideas/intro#fikir-kesfet">Proje fikirlerine bak →</Link></div><div className="guideGrid">

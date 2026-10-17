@@ -34,6 +34,7 @@ const config = {
         { to: '/guide/atk/intro', label: 'Agent Trade Kit', position: 'left', activeBasePath: '/guide/atk' },
         { to: '/guide/onchainos/intro', label: 'OnchainOS', position: 'left', activeBasePath: '/guide/onchainos' },
         { to: '/guide/okx-ai/intro', label: 'OKX.ai', position: 'left', activeBasePath: '/guide/okx-ai' },
+        { to: '/guide/avalanche/intro', label: 'Avalanche', position: 'left', activeBasePath: '/guide/avalanche' },
         { to: '/guide/ideas/intro#fikir-kesfet', label: 'Fikirler', position: 'left', activeBasePath: '/guide/ideas', className: 'navbar__item--compact' },
         { to: '/guide/build/atk-data-quality', label: 'Örnek projeler', position: 'right', activeBasePath: '/guide/build', className: 'navbar__item--optional' },
         { to: '/ai', label: 'LLM dosyaları', position: 'right', className: 'navbar__item--optional' },
@@ -45,7 +46,8 @@ const config = {
       links: [
         { title: 'Rehberler', items: [
           { label: 'Buradan başla', to: '/guide/start/intro' },
-          { label: 'Jüriye hazırlık', to: '/guide/start/judging' },
+          { label: 'Avalanche', to: '/guide/avalanche/intro' },
+          { label: 'Jüriye hazırlık', to: '/guide/avalanche/judging' },
           { label: 'Örnek projeler', to: '/guide/build/atk-data-quality' },
           { label: 'OKX TR Agent Trade Kit', to: '/guide/atk/intro' },
           { label: 'OnchainOS', to: '/guide/onchainos/intro' },

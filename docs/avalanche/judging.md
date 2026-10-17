@@ -1,11 +1,11 @@
 ---
-title: Avalanche ve jüriye hazırlık
+title: Jüriye hazırlık
 description: Team1 Builder Hub bağlantısı, öneri niteliğindeki değerlendirme ölçütleri ve proje kanıt listesi.
 ---
 
-# Avalanche ve jüriye hazırlık
+# Jüriye hazırlık
 
-Avalanche araçlarıyla geliştirmeye başlamak için **[Team1 yönlendirmesiyle Avalanche Builder Hub'a kaydol](https://go.team1.network/turkiye-builder)**. Bu bağlantı Builder Hub'a yönlenir ve Team1 referansını korur. Builder Hub hesabı; geliştirici kaynakları ve testnet araçlarına erişim için bir başlangıçtır. **Hackathon başvurusu, etkinlik kabulü veya proje teslimi yerine geçmez.** Etkinlik kaydı ve son teslim koşullarını organizatörün güncel duyurusundan ayrıca doğrula.
+[Avalanche başlangıç sayfasında](./intro.md) Team1 Builder Hub bağlantısını ve geliştirici kaynaklarını bulabilirsin. Builder Hub hesabı **hackathon başvurusu, etkinlik kabulü veya proje teslimi yerine geçmez.** Etkinlik kaydı ve son teslim koşullarını organizatörün güncel duyurusundan ayrıca doğrula.
 
 ## Paylaşılan değerlendirme taslağı
 
