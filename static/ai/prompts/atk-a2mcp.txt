@@ -4,4 +4,4 @@ Keep the first milestone local and read-only: GET /summary?instId=BTC-USDT, expl
 
 Acceptance: demonstrate a normal fixture request, an invalid instrument, and an upstream failure; explain the contract and remaining A2MCP steps. Do not place orders or invoke real payments.
 
-Presentation: use https://agentic-hackathon-tr.vercel.app/guide/avalanche/judging to show agent decisions, actual OKX tool evidence, a working demo, user value, and separate proof for any claimed Avalanche deployment. Treat future OKX.ai listing as a plan until verified. The guide's scoring weights are a user-provided draft, not official event rules.
+Presentation: use https://agentic-hackathon-tr.vercel.app/guide/start/judging to show agent decisions, actual OKX tool evidence, a working demo, user value, and separate proof for any claimed Avalanche deployment. Treat future OKX.ai listing as a plan until verified. The guide's scoring weights are a user-provided draft, not official event rules.

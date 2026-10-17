@@ -1,11 +1,11 @@
 ---
 title: Jüriye hazırlık
-description: Team1 Builder Hub bağlantısı, öneri niteliğindeki değerlendirme ölçütleri ve proje kanıt listesi.
+description: Öneri niteliğindeki değerlendirme ölçütleri ve proje sunumu için kanıt listesi.
 ---
 
 # Jüriye hazırlık
 
-[Avalanche başlangıç sayfasında](./intro.md) Team1 Builder Hub bağlantısını ve geliştirici kaynaklarını bulabilirsin. Builder Hub hesabı **hackathon başvurusu, etkinlik kabulü veya proje teslimi yerine geçmez.** Etkinlik kaydı ve son teslim koşullarını organizatörün güncel duyurusundan ayrıca doğrula.
+[Avalanche başlangıç sayfasında](../avalanche/intro.md) Team1 Builder Hub bağlantısını ve geliştirici kaynaklarını bulabilirsin. Builder Hub hesabı **hackathon başvurusu, etkinlik kabulü veya proje teslimi yerine geçmez.** Etkinlik kaydı ve son teslim koşullarını organizatörün güncel duyurusundan ayrıca doğrula.
 
 ## Paylaşılan değerlendirme taslağı
 

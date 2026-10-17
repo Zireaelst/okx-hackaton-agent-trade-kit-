@@ -20,7 +20,7 @@ export default function AiPack() {
       <p className="eyebrow">Codex · Claude Code · Cursor</p>
       <h1>Codex ve Claude Code için dosyalar</h1>
       <p>İngilizce dosyalarda ATK kurulum adımları, örnek komutlar ve güvenlik sınırları bulunur. <code>llms.txt</code> kaynak bağlantılarını listeler. Asistan bağlantıyı kendiliğinden açmayabilir; gerekirse dosyayı indirip sohbete ekle.</p>
-      <p>Proje sunumuna hazırlanırken <Link to="/guide/avalanche/judging">jüriye hazırlık rehberini</Link> de kullan. Paylaşılan puan ağırlıkları bir taslaktır; resmî kuralları organizatörden doğrula.</p>
+      <p>Proje sunumuna hazırlanırken <Link to="/guide/start/judging">jüriye hazırlık rehberini</Link> de kullan. Paylaşılan puan ağırlıkları bir taslaktır; resmî kuralları organizatörden doğrula.</p>
       <div className="aiBox">
         <h2>Başlangıç talimatı</h2>
         <p>Codex veya Claude Code'a ilk görev olarak yapıştır. Gerçek işlem istemez.</p>

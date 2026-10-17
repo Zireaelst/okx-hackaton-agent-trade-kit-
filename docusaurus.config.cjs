@@ -46,8 +46,8 @@ const config = {
       links: [
         { title: 'Rehberler', items: [
           { label: 'Buradan başla', to: '/guide/start/intro' },
+          { label: 'Jüriye hazırlık', to: '/guide/start/judging' },
           { label: 'Avalanche', to: '/guide/avalanche/intro' },
-          { label: 'Jüriye hazırlık', to: '/guide/avalanche/judging' },
           { label: 'Örnek projeler', to: '/guide/build/atk-data-quality' },
           { label: 'OKX TR Agent Trade Kit', to: '/guide/atk/intro' },
           { label: 'OnchainOS', to: '/guide/onchainos/intro' },

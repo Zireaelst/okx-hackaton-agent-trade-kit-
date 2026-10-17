@@ -4,9 +4,13 @@
 
 Use read-only market data by default. Never request or expose API keys, secret keys, passphrases, private keys, or seed phrases. Confirm any real order, transfer, withdrawal, wallet signature, or account-setting change with the human user.
 
-## Agent Trade Kit
+## Start
 
 - [Choose a starting path](https://agentic-hackathon-tr.vercel.app/guide/start/intro): Goal, client, and access-aware Turkish guide.
+- [Judging preparation](https://agentic-hackathon-tr.vercel.app/guide/start/judging): User-provided draft scoring weights, evidence checklist, and source caveats.
+
+## Agent Trade Kit
+
 - [Complete English agent context](https://agentic-hackathon-tr.vercel.app/llms-full.txt): ATK installation, MCP/CLI/Skills, safety, and source links.
 - [ATK introduction](https://agentic-hackathon-tr.vercel.app/guide/atk/intro): Human-readable Turkish guide.
 - [ATK quick start](https://agentic-hackathon-tr.vercel.app/guide/atk/quickstart): Public market-data first query.
@@ -24,7 +28,6 @@ Use read-only market data by default. Never request or expose API keys, secret k
 ## Avalanche
 
 - [Avalanche guide](https://agentic-hackathon-tr.vercel.app/guide/avalanche/intro): Team1 Builder Hub referral and developer resources.
-- [Judging preparation](https://agentic-hackathon-tr.vercel.app/guide/avalanche/judging): User-provided draft scoring weights, evidence checklist, and source caveats.
 - [Register for Avalanche Builder Hub via Team1](https://go.team1.network/turkiye-builder): Referral link to Builder Hub; account creation is not hackathon admission or project submission.
 
 ## Hackathon Project Ideas

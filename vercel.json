@@ -4,6 +4,6 @@
   "outputDirectory": "build",
   "installCommand": "npm ci",
   "redirects": [
-    { "source": "/guide/start/judging", "destination": "/guide/avalanche/judging", "permanent": true }
+    { "source": "/guide/avalanche/judging", "destination": "/guide/start/judging", "permanent": true }
   ]
 }

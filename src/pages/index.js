@@ -23,7 +23,7 @@ export default function Home() {
               <Link className="button button--primary button--lg" to="/guide/start/intro">Rehbere başla <span aria-hidden="true">→</span></Link>
               <Link className="button button--outline button--secondary button--lg" to="/guide/ideas/intro#fikir-kesfet">{ideas.length} proje fikri</Link>
             </div>
-            <p className="heroBuilderLink">Avalanche için: <a href="https://go.team1.network/turkiye-builder" target="_blank" rel="noopener noreferrer">Team1 bağlantısıyla Builder Hub'a kaydol ↗</a> · <Link to="/guide/avalanche/judging">Jüri ölçütleri</Link></p>
+            <p className="heroBuilderLink">Avalanche için: <a href="https://go.team1.network/turkiye-builder" target="_blank" rel="noopener noreferrer">Team1 bağlantısıyla Builder Hub'a kaydol ↗</a> · <Link to="/guide/start/judging">Jüri ölçütleri</Link></p>
           </div>
           <aside className="heroJourney" aria-label="Demoya giden üç adım">
             <div className="heroJourneyHeader">İlk üç adım</div>

@@ -1,9 +1,9 @@
 module.exports = {
   start: [
-    { type: 'category', label: 'Başlangıç', items: ['start/intro'] },
+    { type: 'category', label: 'Başlangıç', items: ['start/intro', 'start/judging'] },
   ],
   avalanche: [
-    { type: 'category', label: 'Avalanche', items: ['avalanche/intro', 'avalanche/judging'] },
+    { type: 'category', label: 'Avalanche', items: ['avalanche/intro'] },
   ],
   build: [
     { type: 'category', label: 'Örnek projeler', items: [

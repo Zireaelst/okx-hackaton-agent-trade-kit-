@@ -4,7 +4,7 @@ Hackathon katılımcıları için hazırlanmış bağımsız Türkçe dokümanta
 
 **Canlı site:** https://agentic-hackathon-tr.vercel.app/
 
-Avalanche Builder Hub'a Team1 referansıyla giriş: https://go.team1.network/turkiye-builder . Avalanche rehberi: https://agentic-hackathon-tr.vercel.app/guide/avalanche/intro . Kullanıcı tarafından paylaşılan öneri jüri ölçütleri ve kanıt listesi: https://agentic-hackathon-tr.vercel.app/guide/avalanche/judging . Bu ölçütler doğrulanmış resmî etkinlik kuralları olarak sunulmaz.
+Avalanche Builder Hub'a Team1 referansıyla giriş: https://go.team1.network/turkiye-builder . Avalanche rehberi: https://agentic-hackathon-tr.vercel.app/guide/avalanche/intro . Kullanıcı tarafından paylaşılan öneri jüri ölçütleri ve kanıt listesi: https://agentic-hackathon-tr.vercel.app/guide/start/judging . Bu ölçütler doğrulanmış resmî etkinlik kuralları olarak sunulmaz.
 
 ## Yerelde çalıştır
 
@@ -31,8 +31,8 @@ Statik çıktı `build/` klasöründedir. `vercel.json` kurulum, build ve çıkt
 - `docs/onchainos/`: OnchainOS rehberi
 - `docs/okx-ai/`: OKX.ai rehberi
 - `docs/ideas/`: 21 ATK odaklı fikir dahil 40 topluluk hackathon fikri; giriş sayfasında ürün, erişim ve metin filtreleri
-- `docs/start/`: hedefe ve istemciye göre başlangıç yolu
-- `docs/avalanche/`: Builder Hub başlangıcı ve jüriye hazırlık sayfası
+- `docs/start/`: hedefe ve istemciye göre başlangıç yolu ve jüriye hazırlık
+- `docs/avalanche/`: Builder Hub başlangıcı ve geliştirici kaynakları
 - `docs/build/`: çalışan ATK veri kalitesi, yerel veri servisi ve temsili 402 proje reçeteleri
 - `examples/`: reçetelerdeki çalıştırılabilir, salt okunur veya tamamen temsili örnekler
 - `static/llms.txt`, `static/llms-full.txt`: İngilizce agent bağlamı

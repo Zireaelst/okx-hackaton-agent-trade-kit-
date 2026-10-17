@@ -13,7 +13,7 @@ Avalanche üzerinde geliştireceksen önce [Team1 bağlantısıyla Builder Hub'a
 2. **OKX kullanımı:** ATK, OnchainOS veya OKX.ai araçlarından hangisini kullandığını ve çalışan örnekte hangi çağrının yapıldığını göster. Planladığın özelliklerle çalışan özellikleri ayır.
 3. **Sunum kanıtları:** Herkese açık depo, çalıştırma adımları, canlı demo ve varsa kontrat adresi ile blok gezgini bağlantısını hazırla.
 
-Puan başlıkları, kontrol listesi ve resmî kurallara ilişkin uyarılar için [jüriye hazırlık sayfasına](./judging.md) geç.
+Puan başlıkları, kontrol listesi ve resmî kurallara ilişkin uyarılar için **Başla** bölümündeki [jüriye hazırlık sayfasına](../start/judging.md) geç.
 
 ## Geliştirici kaynakları
 
