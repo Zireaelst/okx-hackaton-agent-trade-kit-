@@ -30,6 +30,15 @@ const rows = [
   [29, 'ASP Teslim Kalitesi Kontrolü', 'okxai', 'simulated', 'Örnek hizmet teslimini şema, kaynak ve zaman kurallarıyla denetle.'],
   [30, 'Evaluator Kanıt Panosu', 'okxai', 'simulated', 'Brief, teslim ve itiraz kanıtlarını tek ekranda topla.'],
   [31, 'Çok Agentlı Görev Bütçesi', 'okxai', 'simulated', 'Alt görevlerin maliyet ve teslim bağımlılıklarını planla.'],
+  [32, 'Mum Oynaklığı Öğretmeni', 'atk', 'public', 'Kapanmış mumlarla fiyat aralığı ve oynaklık kavramını kanıtlı örneklerle öğret.'],
+  [33, 'Piyasa Verisi Ulaşılabilirlik Monitörü', 'atk', 'public', 'Salt okunur sorguların gecikmesini, hatasını ve son başarılı zamanını izle.'],
+  [34, 'Emir Defteri Derinlik Haritası', 'atk', 'public', 'Emir defteri seviyelerini anlaşılır bir yoğunluk görseline dönüştür.'],
+  [35, 'Agent Sorgu Bütçesi', 'atk', 'public', 'Bir görevde gereken piyasa araçlarını ve gereksiz tekrarları görünür kıl.'],
+  [36, 'Piyasa Verisi Kanıtlayıcısı', 'atk', 'public', 'Basit piyasa iddialarını kaynak yanıtı ve zaman damgasıyla kontrol et.'],
+  [37, 'Ödeme Geçmişi Gizlilik Filtresi', 'onchainos', 'simulated', 'Makbuz eşleştirirken adres ve kişisel alanları rol bazlı maskele.'],
+  [38, 'Ücretli API Erişim Kurtarma Akışı', 'onchainos', 'simulated', '402, süre dolumu ve tekrar denemede çift erişimi engelleyen akış tasarla.'],
+  [39, 'A2A Görev Kurtarma Masası', 'okxai', 'simulated', 'Geciken veya eksik agent tesliminde seçenekleri ve onay noktalarını göster.'],
+  [40, 'Kör Hizmet Değerlendirme Atölyesi', 'okxai', 'simulated', 'İki temsili teslimi sağlayıcı adını gizleyerek aynı ölçütlerle değerlendir.'],
 ];
 
 const section = { atk: 'atk', onchainos: 'onchainos', okxai: 'okx-ai' };

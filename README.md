@@ -30,7 +30,7 @@ Statik çıktı `build/` klasöründedir. `vercel.json` kurulum, build ve çıkt
 - `docs/atk/setup-*.md`: Codex, Claude Code ve Cursor için ayrı CLI, MCP, Skills kurulumları
 - `docs/onchainos/`: OnchainOS rehberi
 - `docs/okx-ai/`: OKX.ai rehberi
-- `docs/ideas/`: 16 ATK odaklı fikir dahil 31 topluluk hackathon fikri; giriş sayfasında ürün, erişim ve metin filtreleri
+- `docs/ideas/`: 21 ATK odaklı fikir dahil 40 topluluk hackathon fikri; giriş sayfasında ürün, erişim ve metin filtreleri
 - `docs/start/`: hedefe ve istemciye göre başlangıç yolu; Avalanche/Jüri hazırlık sayfası
 - `docs/build/`: çalışan ATK veri kalitesi, yerel veri servisi ve temsili 402 proje reçeteleri
 - `examples/`: reçetelerdeki çalıştırılabilir, salt okunur veya tamamen temsili örnekler

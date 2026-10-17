@@ -3,17 +3,17 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { ideas, filterIdeas } from '../src/data/ideas.mjs';
 
-test('catalogue covers all 31 existing ideas with distinct source links', () => {
-  assert.equal(ideas.length, 31);
-  assert.deepEqual(ideas.map((idea) => idea.id), Array.from({ length: 31 }, (_, index) => index + 1));
-  assert.equal(new Set(ideas.map((idea) => idea.href)).size, 31);
+test('catalogue covers all 40 ideas with distinct source links', () => {
+  assert.equal(ideas.length, 40);
+  assert.deepEqual(ideas.map((idea) => idea.id), Array.from({ length: 40 }, (_, index) => index + 1));
+  assert.equal(new Set(ideas.map((idea) => idea.href)).size, 40);
   assert.deepEqual(
     ['atk', 'onchainos', 'okxai'].map((product) => ideas.filter((idea) => idea.product === product).length),
-    [16, 9, 6],
+    [21, 11, 8],
   );
   assert.deepEqual(
     ['public', 'verify', 'account', 'simulated'].map((access) => ideas.filter((idea) => idea.access === access).length),
-    [7, 4, 4, 16],
+    [12, 4, 4, 20],
   );
   assert.deepEqual(ideas.filter((idea) => idea.recipe).map((idea) => idea.id), [1, 16, 17]);
 });

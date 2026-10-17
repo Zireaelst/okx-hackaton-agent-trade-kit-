@@ -24,7 +24,7 @@ Skills tek başına bir borsa bağlantısı değildir; ilgili beceriler, kurulu 
 1. [5 dakikalık başlangıç](./quickstart.md) ile anahtarsız veri okuyun.
 2. [Codex](./setup-codex.md), [Claude Code](./setup-claude-code.md) veya [Cursor](./setup-cursor.md) kurulumunu izleyin.
 3. [Rehberli demoda](./demo.mdx) ticker, order book ve mum verisini birleştirin.
-4. Projenize uygun veri kaynaklarını seçin; [16 ATK projesi fikrini](../ideas/atk.md) erişim düzeyine göre inceleyin.
+4. Projenize uygun veri kaynaklarını seçin; [21 ATK projesi fikrini](../ideas/atk.md) erişim düzeyine göre inceleyin.
 
 ## Kapsam sınırı
 

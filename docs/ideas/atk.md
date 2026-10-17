@@ -1,15 +1,15 @@
 ---
-title: ATK ile 16 proje fikri
+title: ATK ile 21 proje fikri
 description: Agent Trade Kit verisini eğitim, kalite kontrolü ve hizmet prototiplerinde kullanma fikirleri.
 ---
 
-# ATK ile 16 proje fikri
+# ATK ile 21 proje fikri
 
 ATK adında “Trade” geçse de hackathon prototipi emir vermek zorunda değildir. [Resmî depoda](https://github.com/okx/agent-trade-kit) anahtarsız `market`, haber ve salt okunur hesap sorguları gibi farklı araçlar bulunur. **ATK, OnchainOS ödeme veya OKX.ai marketplace modülü değildir.** Bu fikirlerde iki ürünü birleştirirsen ayrı entegrasyon ve izin sınırlarını açıkça göster.
 
 | Yapılabilirlik | Fikirler | İlk demo |
 | --- | --- | --- |
-| **Doğrudan ATK, anahtarsız** | 1, 2, 4, 6–9 | `market` verisi veya açıkça temsili yanıt |
+| **Doğrudan ATK, anahtarsız** | 1, 2, 4, 6–9, 32–36 | `market` verisi veya açıkça temsili yanıt |
 | **ATK haber aracı, erişimi doğrula** | 3, 10, 11 | Temsili haber; kurulu sürüm ve bölgeyi kontrol et |
 | **ATK okuma yetkisi gerekli** | 5, 12–14 | Kişisel veri içermeyen temsili hesap kayıtları |
 | **Yerel günlük / kurulu sürüm** | 15 | Temsili araç çağrısı günlüğü |
@@ -81,11 +81,32 @@ ATK adında “Trade” geçse de hackathon prototipi emir vermek zorunda değil
 
 **Kimin sorunu?** ATK'den türetilmiş bir doğrulama/özetleme hizmetinin başka agent'lara açık biçimde sunulması. **MVP:** ATK `market` verisini kullanan, açık giriş/çıkış şemalı bir servis kur; ücretsiz sonuç ve **temsili** HTTP 402 ücretli sonuç ekranı göster. **Demo:** Geçerli yanıt, eski veri ve ödeme reddi. **Sınır:** Veri ATK'den gelebilir; [A2MCP servis biçimi](https://web3.okx.com/onchainos/dev-docs/okxai/howtomcp) OKX.ai, [ödeme](https://web3.okx.com/onchainos/dev-docs/payments/api-overview) OnchainOS tarafındadır. ATK tek başına ödeme almaz. Canlı yayın ve fiyatlandırma ayrıca erişim ve entegrasyon gerektirir.
 
+## 32. Mum Oynaklığı Öğretmeni
+
+**Kimin sorunu?** Yeni başlayanların büyük bir mum aralığını doğrudan gelecek fiyat tahmini sanması. **MVP:** ATK'den alınan **kapanmış** mumları seçilen zaman aralığında yüksek/düşük farkı ve basit aralık ölçüsüyle açıkla; kullanılan mumları tek tek göster. **Demo:** Aynı enstrümanda 1 saatlik ve 1 günlük örneğin farklı yorumlandığını göster; açık mumu hesaba katma. **Dayanak:** [ATK `market candles`](https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md). Bu eğitim aracı yatırım önerisi üretmez.
+
+## 33. Piyasa Verisi Ulaşılabilirlik Monitörü
+
+**Kimin sorunu?** Agent'ın veri alamadığı anlarda son başarılı yanıtı güncel sanması. **MVP:** ATK'nin salt okunur ticker sorgularında yanıt süresi, hata kodu ve son başarılı veri zamanını kaydet; erişilemiyorsa “canlı” etiketini kaldır. **Demo:** Yerel olarak gecikme ve hata senaryosu enjekte et; gerçek sorgu yapılıyorsa aralığı makul tut. **Dayanak:** [ATK public market komutları ve hata kodları](https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md). Bu, OKX hizmetinin resmî çalışma durumu değildir.
+
+## 34. Emir Defteri Derinlik Haritası
+
+**Kimin sorunu?** İlk beş emir defteri seviyesindeki miktarların tablo halinde zor okunması. **MVP:** ATK `market orderbook` yanıtını alış/satış tarafları, fiyat seviyesi ve kümülatif miktar olarak görselleştir; alınma zamanını belirt. **Demo:** Temsili sığ ve yoğun iki defteri karşılaştır. **Dayanak:** [ATK `market orderbook`](https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md). Görünen derinlik gerçek işlem fiyatı veya gerçekleşme garantisi değildir.
+
+## 35. Agent Sorgu Bütçesi
+
+**Kimin sorunu?** Bir agent'ın aynı bilgiyi almak için gereksiz sayıda piyasa aracı çağırması. **MVP:** Görev başlamadan gerekli `ticker`, `candles` ve `orderbook` çağrılarını listele; yinelenen isteği, veri yaşını ve çağrı sayısını yerel izde göster. **Demo:** İki eşdeğer okuma planını çağrı sayısı ve kaynak şeffaflığı açısından karşılaştır. **Dayanak:** [ATK public market araçları](https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md). Varsayımsal ücret veya resmî kota iddiası kurma.
+
+## 36. Piyasa Verisi Kanıtlayıcısı
+
+**Kimin sorunu?** Bir agent'ın “şu an spread geniş” gibi bir cümleyi kaynaksız söylemesi. **MVP:** Yalnız önceden tanımlanmış, sayısal ve doğrulanabilir iddiaları ATK ticker veya order book alanlarıyla eşleştir; hesap ve veri zamanını göster. **Demo:** Kanıtlanan, eski verili ve doğrulanamayan üç iddia. **Dayanak:** [ATK public market verisi](https://github.com/okx/agent-trade-kit/blob/github-main/docs/cli-reference.md). Serbest metinden fiyat tahmini ya da yatırım tavsiyesi çıkarma.
+
 ## Önce hangisini yapmalı?
 
 | Süre ve erişim | Önerilen yol | Gösterilecek kanıt |
 | --- | --- | --- |
 | Anahtar yok, en kısa demo | 1 → 2 veya 8 | Gerçek salt okunur yanıt + temsili hata senaryosu |
+| Eğitim ve güvenilirlik odaklı | 32 → 36 veya 33 | Kapanmış mum/yanıt zamanı + iddia kanıtı veya hata izi |
 | Haber erişimi belirsiz | 10 → 11 | Temsili veri; erişim doğrulanırsa canlı kaynak |
 | Hesap erişimi yok | 12 veya 13 | Kişisel veri içermeyen temsili kayıt |
 | Ürünleri birleştirmek istiyor | 4 → 16 | ATK veri kaynağı, ayrı servis ve ödeme sınırı |

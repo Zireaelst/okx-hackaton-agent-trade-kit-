@@ -1,9 +1,9 @@
 ---
-title: OnchainOS ile 9 fikir
+title: OnchainOS ile 11 fikir
 description: Agentic payment, HTTP 402, abonelik ve cüzdan onayı için trade dışı proje fikirleri.
 ---
 
-# OnchainOS ile 9 fikir
+# OnchainOS ile 11 fikir
 
 [OnchainOS](https://web3.okx.com/onchainos/dev-docs/home/what-is-onchainos) bu bölümün ödeme ve cüzdan dayanağıdır. [Payments API](https://web3.okx.com/onchainos/dev-docs/payments/api-overview), **HTTP Seller** ile **Agent Seller** akışlarını ayırır. Yöntemlerin hepsi her akışta mevcut değildir; örneğin Agent API sayfasında bazı ödeme türleri “coming soon” görünür. Bu yüzden aşağıdaki MVP'ler **yerel simülasyon** ile başlar. Gerçek ödeme, imza veya para hareketi yoktur.
 
@@ -42,6 +42,14 @@ description: Agentic payment, HTTP 402, abonelik ve cüzdan onayı için trade d
 ## 25. Cüzdan Eylem Önizlemesi
 
 **Kimin sorunu?** Bir agent'ın imza isteğinin kullanıcı için anlaşılmaz kalması. **MVP:** Temsili eylemde hedef adres, ağ, varlık, tutar, ücret ve olası kalıcı etkileri sade dille açıkla; eksik alan varsa onayı kapat. **Demo:** Yanlış ağ ve değişmiş alıcı senaryoları. **Dayanak:** [Agentic Wallet yaklaşımı](https://web3.okx.com/onchainos/dev-docs/wallet/agentic-wallet). Gerçek cüzdan bağlama veya imza yok; bu, OKX'in yerleşik güvenlik kontrolü olduğuna dair bir iddia değildir.
+
+## 37. Ödeme Geçmişi Gizlilik Filtresi
+
+**Kimin sorunu?** Destek ekibinin ödeme hatasını incelerken tam adresleri veya kişisel alanları gereksiz yere görmesi. **MVP:** Temsili ödeme makbuzunda rol bazlı maskeleme ve yalnız hata ayıklama için gerekli alanları gösterme. **Demo:** Aynı kaydın kullanıcı, destek ve herkese açık görünümünü karşılaştır; gizlenen alanların mutabakatı bozmadığını göster. **Dayanak:** [OnchainOS ödeme durum ve kimlik alanları](https://web3.okx.com/onchainos/dev-docs/payments/api-agent-onetime). Maskeleme uygulamanın kendi tasarımıdır; gerçek ödeme verisi veya OKX'in hazır gizlilik özelliği kullanılmaz.
+
+## 38. Ücretli API Erişim Kurtarma Akışı
+
+**Kimin sorunu?** Ücretli bir kaynakta 402, süre dolumu ve tekrar deneme sonrasında erişim durumunun belirsizleşmesi. **MVP:** Yerel durum makinesiyle ilk isteği, temsili onayı, sona eren erişimi ve yinelenen isteği izle; aynı demo olayını iki kez teslim etme. **Demo:** Ağ kesintisi sonrası tekrar deneme ve süresi dolmuş izin. **Dayanak:** [OnchainOS HTTP ödeme akışı](https://web3.okx.com/onchainos/dev-docs/payments/api-http). Bu bir deneyim simülasyonudur; sahte başlık veya yerel onay gerçek ödeme kanıtı değildir.
 
 ## Ürün sınırları
 

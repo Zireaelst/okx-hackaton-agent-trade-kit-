@@ -1,9 +1,9 @@
 ---
-title: OKX.ai ile 6 fikir
+title: OKX.ai ile 8 fikir
 description: Agent hizmeti tasarlama, seçim, teslim ve değerlendirme için trade dışı hackathon fikirleri.
 ---
 
-# OKX.ai ile 6 fikir
+# OKX.ai ile 8 fikir
 
 [OKX.ai](https://web3.okx.com/onchainos/dev-docs/okxai/what-is-okxai) User, Agent Service Provider (ASP) ve Evaluator rollerini tanımlar. Aşağıdaki fikirlerin tümü **temsili marketplace verisiyle** gösterilebilir. Gerçek kayıt, görev gönderimi, ödeme, abonelik veya değerlendirme yapılmaz.
 
@@ -30,6 +30,14 @@ description: Agent hizmeti tasarlama, seçim, teslim ve değerlendirme için tra
 ## 31. Çok Agentlı Görev Bütçesi
 
 **Kimin sorunu?** Bir işin çeviri, araştırma ve kalite kontrol gibi alt görevlere ayrılınca maliyetinin belirsizleşmesi. **MVP:** Temsili üç ASP görevi için üst bütçe, bağımlılık ve teslim ölçütleri tasarla; toplam sınır aşılırsa planı durdur. **Demo:** Bir sağlayıcı gecikince yeniden planlama. **Dayanak:** [A2A görev modeli](https://web3.okx.com/onchainos/dev-docs/okxai/a2a-no-subscription) ve [User akışı](https://web3.okx.com/onchainos/dev-docs/okxai/user-buy-service). Ürün içinde hazır çok agentlı orkestrasyon özelliği olduğu iddia edilmez.
+
+## 39. A2A Görev Kurtarma Masası
+
+**Kimin sorunu?** Agent hizmetinde teslim geciktiğinde veya eksik kaldığında kullanıcının seçenekleri görememesi. **MVP:** Temsili görevde bekle, yeniden brief ver, destek iste veya başka sağlayıcı ara seçeneklerini maliyet ve önceki teslim kanıtıyla göster. **Demo:** Geciken ve kısmi teslimde farklı öneriler; kullanıcı onayı olmadan yeni ücretli görev açma. **Dayanak:** [A2A görev akışı](https://web3.okx.com/onchainos/dev-docs/okxai/a2a-no-subscription). Bu, OKX.ai'nin hazır otomatik yeniden atama özelliği değildir.
+
+## 40. Kör Hizmet Değerlendirme Atölyesi
+
+**Kimin sorunu?** Sağlayıcı adı veya fiyatı görüldüğünde aynı kalitedeki iki teslimin farklı değerlendirilmesi. **MVP:** Aynı temsili brief'e verilen iki yanıtı sağlayıcı kimliği gizliyken kaynak, biçim ve kabul ölçütleriyle karşılaştır; gerekçeli puan kartı üret. **Demo:** Etiketler açıldığında gerekçelerin değişmediğini kontrol et. **Dayanak:** [OKX.ai Evaluator rolü](https://web3.okx.com/onchainos/dev-docs/okxai/evaluator-introduction). Bu yerel deney resmî değerlendirme, itiraz kararı veya staking işlemi değildir.
 
 ## Birleştirme örneği
 

@@ -29,10 +29,10 @@ Use read-only market data by default. Never request or expose API keys, secret k
 - [ATK service recipe](https://agentic-hackathon-tr.vercel.app/guide/build/atk-a2mcp): Local JSON HTTP prototype; not an A2MCP registration.
 - [HTTP 402 lab](https://agentic-hackathon-tr.vercel.app/guide/build/payment-402): Simulated payment experience; no wallet or settlement.
 - [Project-specific agent prompts](https://agentic-hackathon-tr.vercel.app/ai): Copyable English prompts for each recipe.
-- [Filterable explorer of 31 project ideas](https://agentic-hackathon-tr.vercel.app/guide/ideas/intro#fikir-kesfet): Search by product, access level, or problem. These are community MVPs, not official OKX products or contest categories.
-- [16 ATK ideas](https://agentic-hackathon-tr.vercel.app/guide/ideas/atk): Feasibility matrix for public market data, access-dependent news, read-only account data, local audit logs, and a cross-product service idea.
-- [9 OnchainOS ideas](https://agentic-hackathon-tr.vercel.app/guide/ideas/onchainos): Agentic payments, HTTP 402, billing, subscriptions, and wallet approval prototypes.
-- [6 OKX.ai ideas](https://agentic-hackathon-tr.vercel.app/guide/ideas/okx-ai): Simulated service design, selection, delivery, and evaluation workflows.
+- [Filterable explorer of 40 project ideas](https://agentic-hackathon-tr.vercel.app/guide/ideas/intro#fikir-kesfet): Search by product, access level, or problem. These are community MVPs, not official OKX products or contest categories.
+- [21 ATK ideas](https://agentic-hackathon-tr.vercel.app/guide/ideas/atk): Public market-data education, reliability, and evidence tools; access-dependent news and account ideas; and a cross-product service proposal.
+- [11 OnchainOS ideas](https://agentic-hackathon-tr.vercel.app/guide/ideas/onchainos): Simulated payments, privacy, recovery, billing, subscriptions, and wallet approval prototypes.
+- [8 OKX.ai ideas](https://agentic-hackathon-tr.vercel.app/guide/ideas/okx-ai): Simulated service design, selection, task recovery, delivery, and evaluation workflows.
 
 ## Official Sources
 

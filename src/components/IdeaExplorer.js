@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
-import { filterIdeas } from '../data/ideas.mjs';
+import { ideas, filterIdeas } from '../data/ideas.mjs';
 
 const productLabels = { atk: 'Agent Trade Kit', onchainos: 'OnchainOS', okxai: 'OKX.ai' };
 const accessLabels = {
@@ -29,7 +29,7 @@ export default function IdeaExplorer() {
         <span className="eyebrow">Fikir keşfi</span>
         <p>Ürüne, erişime veya aklındaki probleme göre daralt. Kartlar ayrıntılı fikir sayfalarına açılır.</p>
       </div>
-      <span className="ideaTotal">31 topluluk fikri</span>
+      <span className="ideaTotal">{ideas.length} topluluk fikri</span>
     </div>
     <div className="ideaControls" role="search" aria-label="Hackathon fikirlerini filtrele">
       <label className="ideaSearch">Fikirlerde ara

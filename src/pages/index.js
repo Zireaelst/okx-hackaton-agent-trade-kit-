@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import ClientStrip from '../components/ClientStrip';
+import { ideas } from '../data/ideas.mjs';
 
 const guides = [
   { tag: 'ANA REHBER', title: 'OKX TR Agent Trade Kit', text: 'MCP, CLI ve Skills ile piyasa verisinden çalışan hackathon prototipine ilerle.', href: '/guide/atk/intro' },
@@ -20,10 +21,10 @@ export default function Home() {
             <p>OKX TR Agent Trade Kit ile güvenli bir ilk sorgu yap, uygun proje reçetesini aç ve Codex veya Claude Code için hazır bağlamı kullan.</p>
             <div className="heroActions">
               <Link className="button button--primary button--lg" to="/guide/start/intro">Buradan başla <span aria-hidden="true">→</span></Link>
-              <Link className="button button--outline button--secondary button--lg" to="/guide/ideas/intro#fikir-kesfet">31 fikri keşfet</Link>
+              <Link className="button button--outline button--secondary button--lg" to="/guide/ideas/intro#fikir-kesfet">{ideas.length} fikri keşfet</Link>
             </div>
             <p className="heroBuilderLink">Avalanche araçlarına hazırlan: <a href="https://go.team1.network/turkiye-builder" target="_blank" rel="noopener noreferrer">Team1 bağlantısıyla Builder Hub hesabı aç ↗</a> · <Link to="/guide/start/judging">Jüriye hazırlık rehberi</Link></p>
-            <div className="heroFacts" aria-label="Rehber kapsamı"><span>3 ürün rehberi</span><span>31 proje fikri</span><span>3 çalışan örnek</span></div>
+            <div className="heroFacts" aria-label="Rehber kapsamı"><span>3 ürün rehberi</span><span>{ideas.length} proje fikri</span><span>3 çalışan örnek</span></div>
           </div>
           <aside className="heroJourney" aria-label="Demoya giden üç adım">
             <div className="heroJourneyHeader"><span className="heroJourneyIcon" aria-hidden="true">↗</span><span>Kısa yol</span></div>
