@@ -2,7 +2,7 @@
 
 Hackathon katılımcıları için hazırlanmış bağımsız Türkçe dokümantasyon sitesi. Ana odak **OKX TR Agent Trade Kit**; OnchainOS ve OKX.ai ayrı rehberlerdir. Resmî OKX yayını değildir.
 
-**Canlı site:** https://okx-tr-atk-hackathon-guide.vercel.app/
+**Canlı site:** https://agentic-hackathon-tr.vercel.app/
 
 ## Yerelde çalıştır
 
