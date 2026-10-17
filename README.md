@@ -4,6 +4,8 @@ Hackathon katılımcıları için hazırlanmış bağımsız Türkçe dokümanta
 
 **Canlı site:** https://agentic-hackathon-tr.vercel.app/
 
+Avalanche Builder Hub'a Team1 referansıyla giriş: https://go.team1.network/turkiye-builder . Kullanıcı tarafından paylaşılan öneri jüri ölçütleri ve kanıt listesi: https://agentic-hackathon-tr.vercel.app/guide/start/judging . Bu ölçütler doğrulanmış resmî etkinlik kuralları olarak sunulmaz.
+
 ## Yerelde çalıştır
 
 Node.js 20+ kullanın:
@@ -29,7 +31,7 @@ Statik çıktı `build/` klasöründedir. `vercel.json` kurulum, build ve çıkt
 - `docs/onchainos/`: OnchainOS rehberi
 - `docs/okx-ai/`: OKX.ai rehberi
 - `docs/ideas/`: 16 ATK odaklı fikir dahil 31 topluluk hackathon fikri; giriş sayfasında ürün, erişim ve metin filtreleri
-- `docs/start/`: hedefe ve istemciye göre başlangıç yolu
+- `docs/start/`: hedefe ve istemciye göre başlangıç yolu; Avalanche/Jüri hazırlık sayfası
 - `docs/build/`: çalışan ATK veri kalitesi, yerel veri servisi ve temsili 402 proje reçeteleri
 - `examples/`: reçetelerdeki çalıştırılabilir, salt okunur veya tamamen temsili örnekler
 - `static/llms.txt`, `static/llms-full.txt`: İngilizce agent bağlamı

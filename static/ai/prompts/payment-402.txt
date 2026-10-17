@@ -3,3 +3,5 @@ Build a clearly simulated HTTP 402 user-experience prototype from examples/payme
 Show four paths: payment required, local demo approval, decline, and expiry. Keep "SIMULATED — no wallet, signature, or payment" visible at all times. The x-demo-approved header is an intentionally fake local switch; it is not x402 payment proof and must never be used for a production access check. Do not connect a wallet or ask for keys. Do not send funds.
 
 Acceptance: unauthenticated local GET returns HTTP 402; fake local approval returns 200 with paymentExecuted:false; decline and expiry never unlock content. Report the exact official protocol work and human approval needed before any real payment integration.
+
+Presentation: use https://agentic-hackathon-tr.vercel.app/guide/start/judging to prepare a live demo and honest evidence list. A simulated HTTP 402 flow is neither a real OKX payment nor an Avalanche deployment; claim either integration only after implementing and verifying it separately. The guide's scoring weights are a user-provided draft, not official event rules.

@@ -7,6 +7,8 @@ Use read-only market data by default. Never request or expose API keys, secret k
 ## Agent Trade Kit
 
 - [Choose a starting path](https://agentic-hackathon-tr.vercel.app/guide/start/intro): Goal, client, and access-aware Turkish guide.
+- [Avalanche and judging preparation](https://agentic-hackathon-tr.vercel.app/guide/start/judging): Team1 Builder Hub referral, user-provided draft scoring weights, evidence checklist, and source caveats.
+- [Register for Avalanche Builder Hub via Team1](https://go.team1.network/turkiye-builder): Referral link to Builder Hub; account creation is not hackathon admission or project submission.
 - [Complete English agent context](https://agentic-hackathon-tr.vercel.app/llms-full.txt): ATK installation, MCP/CLI/Skills, safety, and source links.
 - [ATK introduction](https://agentic-hackathon-tr.vercel.app/guide/atk/intro): Human-readable Turkish guide.
 - [ATK quick start](https://agentic-hackathon-tr.vercel.app/guide/atk/quickstart): Public market-data first query.
@@ -39,3 +41,5 @@ Use read-only market data by default. Never request or expose API keys, secret k
 - [OKX Agent Skills repository](https://github.com/okx/agent-skills)
 - [OnchainOS developer documentation](https://web3.okx.com/onchainos/dev-docs/home/what-is-onchainos)
 - [OKX.ai developer documentation](https://web3.okx.com/onchainos/dev-docs/okxai/what-is-okxai)
+- [Avalanche Builder Hub account guide](https://build.avax.network/academy/avalanche-l1/avalanche-fundamentals/04-creating-an-l1/01a-create-builder-account)
+- [Avalanche C-Chain deployment guide](https://build.avax.network/blog/deploy-a-dapp-on-c-chain-with-foundry)

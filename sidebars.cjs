@@ -1,6 +1,6 @@
 module.exports = {
   start: [
-    { type: 'category', label: 'Buradan başla', items: ['start/intro'] },
+    { type: 'category', label: 'Buradan başla', items: ['start/intro', 'start/judging'] },
   ],
   build: [
     { type: 'category', label: 'Proje reçeteleri', items: [

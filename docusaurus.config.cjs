@@ -35,6 +35,7 @@ const config = {
         { to: '/guide/onchainos/intro', label: 'OnchainOS', position: 'left', activeBasePath: '/guide/onchainos' },
         { to: '/guide/okx-ai/intro', label: 'OKX.ai', position: 'left', activeBasePath: '/guide/okx-ai' },
         { to: '/guide/ideas/intro#fikir-kesfet', label: 'Fikirler', position: 'left', activeBasePath: '/guide/ideas' },
+        { to: '/guide/start/judging', label: 'Jüriye hazırlık', position: 'right' },
         { to: '/guide/build/atk-data-quality', label: 'Reçeteler', position: 'right', activeBasePath: '/guide/build' },
         { to: '/ai', label: 'AI için', position: 'right' },
         { href: 'https://github.com/Zireaelst/okx-hackaton-agent-trade-kit-', label: 'GitHub', position: 'right' },
@@ -45,6 +46,7 @@ const config = {
       links: [
         { title: 'Rehberler', items: [
           { label: 'Buradan başla', to: '/guide/start/intro' },
+          { label: 'Jüriye hazırlık', to: '/guide/start/judging' },
           { label: 'Proje reçeteleri', to: '/guide/build/atk-data-quality' },
           { label: 'OKX TR Agent Trade Kit', to: '/guide/atk/intro' },
           { label: 'OnchainOS', to: '/guide/onchainos/intro' },
@@ -52,6 +54,7 @@ const config = {
           { label: 'Hackathon Fikirleri', to: '/guide/ideas/intro' },
         ] },
         { title: 'Resmî kaynaklar', items: [
+          { label: 'Avalanche Builder Hub kaydı', href: 'https://go.team1.network/turkiye-builder' },
           { label: 'OKX TR ATK', href: 'https://tr.okx.com/docs-v5/agent_en/#introduction' },
           { label: 'OnchainOS Docs', href: 'https://web3.okx.com/onchainos/dev-docs/home/what-is-onchainos' },
           { label: 'OKX.ai Docs', href: 'https://web3.okx.com/onchainos/dev-docs/okxai/what-is-okxai' },

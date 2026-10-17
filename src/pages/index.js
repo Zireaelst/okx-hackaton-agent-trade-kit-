@@ -22,6 +22,7 @@ export default function Home() {
               <Link className="button button--primary button--lg" to="/guide/start/intro">Buradan başla <span aria-hidden="true">→</span></Link>
               <Link className="button button--outline button--secondary button--lg" to="/guide/ideas/intro#fikir-kesfet">31 fikri keşfet</Link>
             </div>
+            <p className="heroBuilderLink">Avalanche araçlarına hazırlan: <a href="https://go.team1.network/turkiye-builder" target="_blank" rel="noopener noreferrer">Team1 bağlantısıyla Builder Hub hesabı aç ↗</a> · <Link to="/guide/start/judging">Jüriye hazırlık rehberi</Link></p>
             <div className="heroFacts" aria-label="Rehber kapsamı"><span>3 ürün rehberi</span><span>31 proje fikri</span><span>3 çalışan örnek</span></div>
           </div>
           <aside className="heroJourney" aria-label="Demoya giden üç adım">
@@ -35,6 +36,12 @@ export default function Home() {
         </div>
       </div></section>
       <ClientStrip />
+      <section className="container builderSection" aria-labelledby="builder-title">
+        <div className="builderPanel">
+          <div><span className="eyebrow">Avalanche Builder Hub</span><h2 id="builder-title">Zincir tarafını da hazırlayın.</h2><p>Team1 bağlantısıyla Builder Hub hesabı açın; ardından jüriye göstereceğiniz gerçek Avalanche ve OKX kanıtlarını planlayın.</p><small>Builder Hub hesabı, hackathon kaydı veya zincir dağıtımı değildir.</small></div>
+          <div className="builderActions"><a className="button button--primary" href="https://go.team1.network/turkiye-builder" target="_blank" rel="noopener noreferrer">Builder Hub'a kaydol ↗</a><Link className="button button--outline button--secondary" to="/guide/start/judging">Jüri rehberini aç</Link></div>
+        </div>
+      </section>
       <section className="container guideSection"><div className="guideSectionHeading"><div><span className="eyebrow">Üç ayrı ürün, açık sınırlar</span><h2>İhtiyacın olan rehbere geç.</h2><p>ATK verisi, zincir üstü araçlar ve agent hizmetleri için ayrı yollar.</p></div><Link to="/guide/ideas/intro#fikir-kesfet">Fikirleri filtrele →</Link></div><div className="guideGrid">
         {guides.map((guide) => <Link key={guide.title} className="guideCard" to={guide.href}><span className="tag">{guide.tag}</span><h3>{guide.title} →</h3><p>{guide.text}</p></Link>)}
       </div></section>

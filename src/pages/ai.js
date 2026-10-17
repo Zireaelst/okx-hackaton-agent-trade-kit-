@@ -20,6 +20,7 @@ export default function AiPack() {
       <p className="eyebrow">Codex · Claude Code · Cursor</p>
       <h1>Agent'a doğru bağlamı ver.</h1>
       <p>İngilizce dosyalar, ATK'nin doğrulanmış başlangıç yollarını ve güvenli kullanım sınırlarını özetler. <code>llms.txt</code> bir kaynak haritasıdır; asistanın bağlantıyı otomatik okuyacağını varsayma. Gerekirse tam metni indirip sohbete ekle.</p>
+      <p>Proje sunumuna hazırlanırken <Link to="/guide/start/judging">Avalanche ve jüriye hazırlık rehberini</Link> de kullan. Paylaşılan puan ağırlıkları bir taslaktır; resmî kuralları organizatörden doğrula.</p>
       <div className="aiBox">
         <h2>Başlangıç prompt'u</h2>
         <p>Codex veya Claude Code'a ilk görev olarak yapıştır. Gerçek işlem istemez.</p>

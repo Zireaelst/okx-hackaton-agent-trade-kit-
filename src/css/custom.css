@@ -53,6 +53,8 @@ html { scroll-behavior: smooth; }
 .heroActions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.6rem 0 1.4rem; }
 .heroActions .button { border-radius: 10px; }
 .heroActions .button span { margin-left: .5rem; }
+.heroBuilderLink { font-size: .9rem !important; line-height: 1.5 !important; margin: 0 0 1.25rem; }
+.heroBuilderLink a { color: var(--guide-accent); font-weight: 750; }
 .heroFacts { display: flex; flex-wrap: wrap; gap: .55rem; color: var(--guide-muted); font-size: .81rem; font-weight: 700; }
 .heroFacts span { padding: .32rem .65rem; border: 1px solid var(--guide-card-border); border-radius: 999px; background: var(--guide-card-bg); }
 .heroJourney { padding: 1.55rem; border: 1px solid #335248; border-radius: 22px; background: linear-gradient(155deg, #182d25, #0f1c19); box-shadow: 0 26px 55px #051b1730; color: #f4fff8; animation: heroRise .55s ease-out both; }
@@ -80,6 +82,14 @@ html { scroll-behavior: smooth; }
 .guideCard h3 { margin-bottom: .4rem; }
 .guideCard p { color: var(--guide-muted); margin-bottom: 0; }
 .guideCard .tag { color: var(--guide-accent); font-size: .76rem; font-weight: 750; text-transform: uppercase; }
+.builderSection { padding-top: 3rem; }
+.builderPanel { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: clamp(1.5rem, 3vw, 2.4rem); border: 1px solid var(--guide-card-border); border-radius: 22px; background: var(--guide-soft-bg); }
+.builderPanel h2 { margin: .35rem 0 .5rem; letter-spacing: -.04em; }
+.builderPanel p { max-width: 54rem; margin: 0 0 .5rem; color: var(--guide-muted); }
+.builderPanel small { color: var(--guide-note); }
+.builderActions { display: flex; flex-wrap: wrap; gap: .65rem; flex: none; }
+.builderActions .button { border-radius: 10px; }
+.builderActions .button:focus-visible { outline: 3px solid var(--guide-accent); outline-offset: 3px; }
 .noteStrip { border-top: 1px solid var(--guide-card-border); padding: 2rem 0; color: var(--guide-note); font-size: .9rem; }
 .aiBox { padding: 1.5rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 14px; background: var(--ifm-background-surface-color); }
 .demoShell { border: 1px solid var(--ifm-color-emphasis-300); border-radius: 18px; padding: 1.5rem; background: var(--ifm-background-surface-color); }
@@ -160,6 +170,7 @@ html { scroll-behavior: smooth; }
 .ideaEmpty { padding: 2.5rem; border: 1px dashed var(--guide-card-border); border-radius: 16px; background: var(--guide-soft-bg); text-align: center; }
 .ideaEmpty p { color: var(--guide-muted); }
 @media (max-width: 996px) { .clientStrip { grid-template-columns: repeat(3, minmax(0, 1fr)); } .pathFinderFields, .promptGrid { grid-template-columns: 1fr; } .heroLayout { grid-template-columns: 1fr; } .heroJourney { max-width: 650px; } }
+@media (max-width: 996px) { .builderPanel { align-items: stretch; flex-direction: column; } }
 @media (max-width: 996px) { .ideaGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ideaControls { grid-template-columns: 1fr 1fr; } .ideaSearch { grid-column: 1 / -1; } }
 @media (max-width: 650px) { .ideaExplorerHeading { align-items: start; flex-direction: column; } .ideaGrid, .ideaControls { grid-template-columns: 1fr; } .ideaSearch { grid-column: auto; } .ideaCard { min-height: auto; } }
 @media (max-width: 600px) { .clientStrip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .paymentTimeline { grid-template-columns: repeat(2, 1fr); } .clientSection { padding: 2.5rem 0; } }
