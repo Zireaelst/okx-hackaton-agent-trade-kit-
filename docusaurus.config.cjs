@@ -27,7 +27,7 @@ const config = {
   themeConfig: {
     image: 'img/social-card.svg',
     navbar: {
-      title: 'OKX Hackathon Guide',
+      title: 'OKX ATK Rehberi',
       hideOnScroll: false,
       items: [
         { to: '/guide/start/intro', label: 'Başla', position: 'left', activeBasePath: '/guide/start', className: 'navbar__item--compact' },

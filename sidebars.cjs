@@ -1,6 +1,6 @@
 module.exports = {
   start: [
-    { type: 'category', label: 'Buradan başla', items: ['start/intro', 'start/judging'] },
+    { type: 'category', label: 'Başlangıç', items: ['start/intro', 'start/judging'] },
   ],
   build: [
     { type: 'category', label: 'Örnek projeler', items: [
@@ -27,7 +27,7 @@ module.exports = {
     ] },
   ],
   ideas: [
-    { type: 'category', label: 'Hackathon Fikirleri', items: [
+    { type: 'category', label: 'Proje fikirleri', items: [
       'ideas/intro', 'ideas/atk', 'ideas/onchainos', 'ideas/okx-ai',
     ] },
   ],

@@ -24,10 +24,9 @@ export default function Home() {
               <Link className="button button--outline button--secondary button--lg" to="/guide/ideas/intro#fikir-kesfet">{ideas.length} proje fikri</Link>
             </div>
             <p className="heroBuilderLink">Avalanche için: <a href="https://go.team1.network/turkiye-builder" target="_blank" rel="noopener noreferrer">Team1 bağlantısıyla Builder Hub'a kaydol ↗</a> · <Link to="/guide/start/judging">Jüri ölçütleri</Link></p>
-            <div className="heroFacts" aria-label="Rehber kapsamı"><span>3 ürün rehberi</span><span>{ideas.length} proje fikri</span><span>3 çalıştırılabilir örnek</span></div>
           </div>
           <aside className="heroJourney" aria-label="Demoya giden üç adım">
-            <div className="heroJourneyHeader"><span className="heroJourneyIcon" aria-hidden="true">↗</span><span>İlk üç adım</span></div>
+            <div className="heroJourneyHeader">İlk üç adım</div>
             <ol>
               <li><span>01</span><div><strong>Kurulumu seç</strong><p>Kullandığın araca uygun ATK adımlarını izle.</p><Link to="/guide/start/intro">Başlangıç rehberi →</Link></div></li>
               <li><span>02</span><div><strong>Örneği çalıştır</strong><p>Piyasa verisini oku veya temsili bir akış dene.</p><Link to="/guide/build/atk-data-quality">Örnek projeler →</Link></div></li>
