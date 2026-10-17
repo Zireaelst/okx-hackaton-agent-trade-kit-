@@ -28,7 +28,7 @@ Statik çıktı `build/` klasöründedir. `vercel.json` kurulum, build ve çıkt
 - `docs/atk/setup-*.md`: Codex, Claude Code ve Cursor için ayrı CLI, MCP, Skills kurulumları
 - `docs/onchainos/`: OnchainOS rehberi
 - `docs/okx-ai/`: OKX.ai rehberi
-- `docs/ideas/`: 16 ATK odaklı fikir dahil 31 topluluk hackathon fikri
+- `docs/ideas/`: 16 ATK odaklı fikir dahil 31 topluluk hackathon fikri; giriş sayfasında ürün, erişim ve metin filtreleri
 - `docs/start/`: hedefe ve istemciye göre başlangıç yolu
 - `docs/build/`: çalışan ATK veri kalitesi, yerel veri servisi ve temsili 402 proje reçeteleri
 - `examples/`: reçetelerdeki çalıştırılabilir, salt okunur veya tamamen temsili örnekler
@@ -37,6 +37,7 @@ Statik çıktı `build/` klasöründedir. `vercel.json` kurulum, build ve çıkt
 - `static/ai/prompts/`: üç projeye özel İngilizce agent prompt'u
 - `assets/`: ana sayfa istemci şeridinde kullanılan ATK ve istemci logoları
 - `SOURCE_AUDIT.md`: kaynak önceliği, kontrol tarihi ve bilinen uyuşmazlıklar
+- `src/data/ideas.mjs`: fikir keşif kartlarının başlık, erişim ve ayrıntı bağlantısı listesi
 
 Yeni komut veya özellik eklerken önce ilgili resmî kaynağı doğrulayın; sayfanın altına kaynak URL'si ve kontrol tarihini yazın. Gerçek fiyatları dokümana sabitlemeyin. API anahtarı, secret, passphrase veya özel anahtar commit etmeyin.
 

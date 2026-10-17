@@ -5,6 +5,7 @@ const config = {
   url: 'https://okx-tr-atk-hackathon-guide.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'throw',
   markdown: { hooks: { onBrokenMarkdownLinks: 'throw' } },
   i18n: { defaultLocale: 'tr', locales: ['tr'] },
   presets: [
@@ -29,12 +30,12 @@ const config = {
       title: 'OKX Hackathon Guide',
       hideOnScroll: false,
       items: [
-        { to: '/guide/start/intro', label: 'Buradan Başla', position: 'left', activeBasePath: '/guide/start' },
+        { to: '/guide/start/intro', label: 'Başla', position: 'left', activeBasePath: '/guide/start' },
         { to: '/guide/atk/intro', label: 'Agent Trade Kit', position: 'left', activeBasePath: '/guide/atk' },
         { to: '/guide/onchainos/intro', label: 'OnchainOS', position: 'left', activeBasePath: '/guide/onchainos' },
         { to: '/guide/okx-ai/intro', label: 'OKX.ai', position: 'left', activeBasePath: '/guide/okx-ai' },
-        { to: '/guide/ideas/intro', label: 'Hackathon Fikirleri', position: 'left', activeBasePath: '/guide/ideas' },
-        { to: '/guide/build/atk-data-quality', label: 'Proje Reçeteleri', position: 'right', activeBasePath: '/guide/build' },
+        { to: '/guide/ideas/intro#fikir-kesfet', label: 'Fikirler', position: 'left', activeBasePath: '/guide/ideas' },
+        { to: '/guide/build/atk-data-quality', label: 'Reçeteler', position: 'right', activeBasePath: '/guide/build' },
         { to: '/ai', label: 'AI için', position: 'right' },
         { href: 'https://github.com/Zireaelst/okx-hackaton-agent-trade-kit-', label: 'GitHub', position: 'right' },
       ],

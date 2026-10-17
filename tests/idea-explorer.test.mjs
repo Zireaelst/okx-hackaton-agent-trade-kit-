@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { ideas, filterIdeas } from '../src/data/ideas.mjs';
 
 test('catalogue covers all 31 existing ideas with distinct source links', () => {
@@ -15,6 +16,16 @@ test('catalogue covers all 31 existing ideas with distinct source links', () => 
     [7, 4, 4, 16],
   );
   assert.deepEqual(ideas.filter((idea) => idea.recipe).map((idea) => idea.id), [1, 16, 17]);
+});
+
+test('catalogue titles stay aligned with the detailed idea guides', () => {
+  const files = { atk: '../docs/ideas/atk.md', onchainos: '../docs/ideas/onchainos.md', okxai: '../docs/ideas/okx-ai.md' };
+  for (const [product, relativePath] of Object.entries(files)) {
+    const markdown = readFileSync(new URL(relativePath, import.meta.url), 'utf8');
+    const headings = [...markdown.matchAll(/^## (\d+\. .+)$/gm)].map((match) => match[1]);
+    const catalogue = ideas.filter((idea) => idea.product === product).map((idea) => `${idea.id}. ${idea.title}`);
+    assert.deepEqual(catalogue, headings, `${product} guide headings changed`);
+  }
 });
 
 test('search uses Turkish case folding and combines product and access filters', () => {

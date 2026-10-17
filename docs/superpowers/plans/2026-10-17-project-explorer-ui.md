@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 # Project Explorer and UI Polish Implementation Plan
 
 > **For agentic workers:** Execute inline in this session. Keep the site static, source claims tied to existing guide pages, and publish only after tests and a production build pass.

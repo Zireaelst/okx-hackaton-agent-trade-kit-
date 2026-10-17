@@ -13,17 +13,29 @@ export default function Home() {
   return <Layout title="Ana Sayfa" description="Hackathon için OKX TR Agent Trade Kit, OnchainOS ve OKX.ai topluluk rehberi">
     <main>
       <section className="heroGuide"><div className="container">
-        <p className="eyebrow">Hackathon topluluk rehberi</p>
-        <h1>Agent araçlarıyla fikrini çalışan bir prototipe dönüştür.</h1>
-        <p>OKX TR Agent Trade Kit ile başla. Kurulumu adım adım izle, salt okunur örnekleri dene ve Codex veya Claude Code için hazır bağlamı kullan.</p>
-        <div className="button-group">
-          <Link className="button button--primary button--lg" to="/guide/start/intro">Sana uygun yolu bul</Link>
-          <Link className="button button--outline button--secondary button--lg" to="/ai">AI paketini al</Link>
-          <Link className="button button--outline button--secondary button--lg" to="/guide/ideas/intro">31 proje fikrine bak</Link>
+        <div className="heroLayout">
+          <div className="heroCopy">
+            <p className="eyebrow">Hackathon topluluk rehberi</p>
+            <h1>Bir fikir seç.<br /><span>Çalışan demoya ilerle.</span></h1>
+            <p>OKX TR Agent Trade Kit ile güvenli bir ilk sorgu yap, uygun proje reçetesini aç ve Codex veya Claude Code için hazır bağlamı kullan.</p>
+            <div className="heroActions">
+              <Link className="button button--primary button--lg" to="/guide/start/intro">Buradan başla <span aria-hidden="true">→</span></Link>
+              <Link className="button button--outline button--secondary button--lg" to="/guide/ideas/intro#fikir-kesfet">31 fikri keşfet</Link>
+            </div>
+            <div className="heroFacts" aria-label="Rehber kapsamı"><span>3 ürün rehberi</span><span>31 proje fikri</span><span>3 çalışan örnek</span></div>
+          </div>
+          <aside className="heroJourney" aria-label="Demoya giden üç adım">
+            <div className="heroJourneyHeader"><span className="heroJourneyIcon" aria-hidden="true">↗</span><span>Kısa yol</span></div>
+            <ol>
+              <li><span>01</span><div><strong>Yolunu seç</strong><p>Hedefin ve kullandığın istemciye göre başla.</p><Link to="/guide/start/intro">Başlangıç rehberi →</Link></div></li>
+              <li><span>02</span><div><strong>Bir örnek çalıştır</strong><p>ATK verisini oku veya temsili akışı dene.</p><Link to="/guide/build/atk-data-quality">Proje reçeteleri →</Link></div></li>
+              <li><span>03</span><div><strong>Agent'a bağlam ver</strong><p>Projeye özel prompt ile geliştirmeye devam et.</p><Link to="/ai">AI paketini aç →</Link></div></li>
+            </ol>
+          </aside>
         </div>
       </div></section>
       <ClientStrip />
-      <section className="container"><div className="guideGrid">
+      <section className="container guideSection"><div className="guideSectionHeading"><div><span className="eyebrow">Üç ayrı ürün, açık sınırlar</span><h2>İhtiyacın olan rehbere geç.</h2><p>ATK verisi, zincir üstü araçlar ve agent hizmetleri için ayrı yollar.</p></div><Link to="/guide/ideas/intro#fikir-kesfet">Fikirleri filtrele →</Link></div><div className="guideGrid">
         {guides.map((guide) => <Link key={guide.title} className="guideCard" to={guide.href}><span className="tag">{guide.tag}</span><h3>{guide.title} →</h3><p>{guide.text}</p></Link>)}
       </div></section>
       <div className="noteStrip"><div className="container">Bu site hackathon katılımcıları için hazırlanmış bağımsız bir topluluk kaynağıdır. Komutlar ve ürün kapsamı değişebilir; kritik adımlarda sayfadaki resmî kaynak bağlantısını kontrol edin.</div></div>

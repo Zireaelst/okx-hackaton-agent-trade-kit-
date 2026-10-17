@@ -23,11 +23,10 @@ export default function IdeaExplorer() {
     setAccess('all');
   }
 
-  return <section id="fikir-kesfet" className="ideaExplorer" aria-labelledby="ideaExplorerTitle">
+  return <section className="ideaExplorer" aria-label="Hackathon fikir keşfi">
     <div className="ideaExplorerHeading">
       <div>
         <span className="eyebrow">Fikir keşfi</span>
-        <h2 id="ideaExplorerTitle">Sana uygun projeyi bul</h2>
         <p>Ürüne, erişime veya aklındaki probleme göre daralt. Kartlar ayrıntılı fikir sayfalarına açılır.</p>
       </div>
       <span className="ideaTotal">31 topluluk fikri</span>
