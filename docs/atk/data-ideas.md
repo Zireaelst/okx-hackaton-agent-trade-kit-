@@ -17,9 +17,9 @@ ATK'nin `market` modülü, bir prototip için anahtarsız başlangıç noktasıd
 
 ## ATK ile başlangıç için üç fikir
 
-Daha geniş bir liste için [31 projelik Hackathon Fikirleri rehberine](../ideas/intro.md) bak. Bunların [16'sı doğrudan ATK odaklıdır](../ideas/atk.md); erişim gereksinimi her fikirde belirtilir.
+Daha geniş bir liste için [31 projelik Hackathon Fikirleri rehberine](../ideas/intro.mdx) bak. Bunların [16'sı doğrudan ATK odaklıdır](../ideas/atk.md); erişim gereksinimi her fikirde belirtilir.
 
-**Trade dışı bir proje arıyorsan:** [agent ödemeleri ve hizmetleri fikirleri](../ideas/intro.md) bölümünden başla. Bu sayfadaki üç örnek yalnız ATK piyasa verisiyle başlangıç seçenekleridir.
+**Trade dışı bir proje arıyorsan:** [agent ödemeleri ve hizmetleri fikirleri](../ideas/intro.mdx) bölümünden başla. Bu sayfadaki üç örnek yalnız ATK piyasa verisiyle başlangıç seçenekleridir.
 
 ### Market Risk Copilot
 

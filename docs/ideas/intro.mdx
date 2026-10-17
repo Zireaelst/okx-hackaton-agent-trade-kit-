@@ -1,0 +1,26 @@
+---
+title: Hackathon fikirleri
+description: ATK odaklı veri, agent ödemeleri ve hizmetler için 31 OKX hackathon fikri.
+---
+
+import IdeaExplorer from '@site/src/components/IdeaExplorer';
+
+# Hackathon fikirleri
+
+Bu seçkideki **31 fikir**, geliştirilebilecek topluluk prototipleridir; hazır OKX ürünleri, resmî yarışma kategorileri veya ödül vaadi değildir. Ana odak [OKX TR Agent Trade Kit](../atk/intro.md): 16 fikir ATK verisiyle başlıyor. Diğer fikirler **agentic payment, hizmet pazaryeri ve güvenli otomasyon** için OnchainOS ile OKX.ai'yi ayrı ürünler olarak kullanıyor. Alım satım ekranı yapmak gerekmez.
+
+<IdeaExplorer />
+
+## Fikirden çalışan demoya
+
+**Çalışan örnek** bağlantısı bulunan üç fikirde kod, adımlar ve beklenen sonuç var: [Veri Kalitesi Panosu](../build/atk-data-quality.mdx), [ATK veri servisi](../build/atk-a2mcp.mdx) ve [temsili 402 akışı](../build/payment-402.mdx). Diğer kartlar kapsam ve MVP önerisidir. Ürünlere göre bütün açıklamaları [ATK](./atk.md), [OnchainOS](./onchainos.md) ve [OKX.ai](./okx-ai.md) rehberlerinde okuyabilirsin.
+
+**Etiketler:** “Anahtarsız piyasa verisi” ATK'nin public market araçlarıyla başlar. “Erişimi doğrula” sürüm ve bölge kontrolü ister. “Hesap okuma yetkisi” canlı kişisel sorgu için ayrı erişim gerektirir. “Temsili demo” gerçek ödeme, cüzdan işlemi veya marketplace kaydı yapmaz.
+
+## Bir fikri hafta sonu demosuna dönüştür
+
+**Tek kullanıcı sorusu → tek görünür akış → iki hata durumu → açık kaynak bağlantısı.** Örneğin 402 demosunda ücretsiz erişim, ödeme gerektiren erişim, reddedilen onay ve süresi dolan talep ayrı ayrı gösterilebilir. Her ekran “temsili” veriyi belirtmeli; ödeme yapılmış veya zincire yazılmış izlenimi vermemeli.
+
+Bu katalogda geçen ödeme, imza, transfer, abonelik ve marketplace işlemleri **varsayılan demo kapsamında simüle edilir**. Gerçek entegrasyon için ilgili API'nin mevcut olup olmadığı, geliştirici erişimi, desteklenen ağ ve cüzdan izinleri ayrıca doğrulanmalıdır. Kullanıcı onayı olmadan gerçek para hareketi yapılmaz; gizli anahtarlar repoya veya sohbete konmaz.
+
+**Kaynak kontrolü: 17 Ekim 2026.** Ürün sınırları için [ATK deposu](https://github.com/okx/agent-trade-kit), [OnchainOS Payments API](https://web3.okx.com/onchainos/dev-docs/payments/api-overview) ve [OKX.ai dokümanı](https://web3.okx.com/onchainos/dev-docs/okxai/what-is-okxai) kullanıldı. Fikirler ve MVP tasarımları topluluk önerisidir.
