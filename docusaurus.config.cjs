@@ -35,10 +35,9 @@ const config = {
         { to: '/guide/onchainos/intro', label: 'OnchainOS', position: 'left', activeBasePath: '/guide/onchainos' },
         { to: '/guide/okx-ai/intro', label: 'OKX.ai', position: 'left', activeBasePath: '/guide/okx-ai' },
         { to: '/guide/ideas/intro#fikir-kesfet', label: 'Fikirler', position: 'left', activeBasePath: '/guide/ideas' },
-        { to: '/guide/start/judging', label: 'Jüriye hazırlık', position: 'right' },
         { to: '/guide/build/atk-data-quality', label: 'Reçeteler', position: 'right', activeBasePath: '/guide/build' },
         { to: '/ai', label: 'AI için', position: 'right' },
-        { href: 'https://github.com/Zireaelst/okx-hackaton-agent-trade-kit-', label: 'GitHub', position: 'right' },
+        { href: 'https://go.team1.network/turkiye-builder', label: "Builder Hub'a kaydol ↗", position: 'right', className: 'navbar__link--builder' },
       ],
     },
     footer: {
@@ -52,6 +51,7 @@ const config = {
           { label: 'OnchainOS', to: '/guide/onchainos/intro' },
           { label: 'OKX.ai', to: '/guide/okx-ai/intro' },
           { label: 'Hackathon Fikirleri', to: '/guide/ideas/intro' },
+          { label: 'Site GitHub deposu', href: 'https://github.com/Zireaelst/okx-hackaton-agent-trade-kit-' },
         ] },
         { title: 'Resmî kaynaklar', items: [
           { label: 'Avalanche Builder Hub kaydı', href: 'https://go.team1.network/turkiye-builder' },

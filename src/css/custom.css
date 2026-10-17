@@ -44,6 +44,11 @@ html { scroll-behavior: smooth; }
 .navbar__item { padding-left: .55rem; padding-right: .55rem; }
 @supports (backdrop-filter: blur(12px)) { .navbar { background: color-mix(in srgb, var(--ifm-navbar-background-color) 93%, transparent); backdrop-filter: blur(12px); } }
 .navbar__title { font-weight: 750; letter-spacing: -.03em; }
+.navbar__link--builder { border-radius: 9px; background: #0d6a57; color: #fff !important; font-weight: 800; padding: .45rem .75rem !important; }
+.navbar__link--builder:hover { background: #095642; color: #fff !important; }
+.navbar__link--builder:focus-visible { outline: 3px solid #48bd91; outline-offset: 2px; }
+[data-theme='dark'] .navbar__link--builder { background: #89e9bf; color: #103227 !important; }
+[data-theme='dark'] .navbar__link--builder:hover { background: #b0f8d6; color: #103227 !important; }
 .heroGuide { position: relative; overflow: hidden; padding: clamp(3.5rem, 6vw, 6rem) 0; background: var(--guide-hero-bg); }
 .heroGuide::before { content: ''; position: absolute; width: 34rem; height: 34rem; border: 1px solid var(--guide-card-border); border-radius: 50%; right: -14rem; top: -16rem; pointer-events: none; }
 .heroLayout { position: relative; display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(19rem, .82fr); align-items: center; gap: clamp(2rem, 5vw, 5rem); }
